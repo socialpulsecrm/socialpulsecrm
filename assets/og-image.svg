@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Social Pulse — AI social media management platform">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f1024"/>
+      <stop offset="0.55" stop-color="#241152"/>
+      <stop offset="1" stop-color="#3b0d63"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="grad-text" x1="80" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a5b4fc"/>
+      <stop offset="1" stop-color="#e9d5ff"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.2" cy="0.2" r="0.6">
+      <stop stop-color="#6366f1" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.85" cy="0.85" r="0.55">
+      <stop stop-color="#a855f7" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Brand mark -->
+  <g transform="translate(80, 72)">
+    <rect width="96" height="96" rx="26" fill="url(#mark)"/>
+    <path d="M18 50h12l7-22 12 39 7-25 5 8h18" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="196" y="140" font-family="Inter, -apple-system, Segoe UI, Roboto, sans-serif" font-size="44" font-weight="800" fill="#ffffff">Social Pulse</text>
+
+  <!-- Headline -->
+  <text x="80" y="290" font-family="Inter, -apple-system, Segoe UI, Roboto, sans-serif" font-size="74" font-weight="900" fill="#ffffff" letter-spacing="-2">The AI social media</text>
+  <text x="80" y="372" font-family="Inter, -apple-system, Segoe UI, Roboto, sans-serif" font-size="74" font-weight="900" fill="url(#grad-text)" letter-spacing="-2">platform for everyone</text>
+
+  <!-- Subhead -->
+  <text x="80" y="440" font-family="Inter, -apple-system, Segoe UI, Roboto, sans-serif" font-size="30" font-weight="500" fill="#c4b5fd">Plan, publish, engage &amp; grow across 12 platforms with 16 AI agents.</text>
+
+  <!-- Pills -->
+  <g font-family="Inter, -apple-system, Segoe UI, Roboto, sans-serif" font-size="26" font-weight="600" fill="#ede9fe">
+    <rect x="80" y="500" width="246" height="62" rx="31" fill="#ffffff" fill-opacity="0.10" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="116" y="540">12 platforms</text>
+    <rect x="350" y="500" width="232" height="62" rx="31" fill="#ffffff" fill-opacity="0.10" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="386" y="540">16 AI agents</text>
+    <rect x="606" y="500" width="300" height="62" rx="31" fill="#ffffff" fill-opacity="0.10" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="642" y="540">Free — no card</text>
+  </g>
+
+  <!-- Domain -->
+  <text x="1120" y="600" text-anchor="end" font-family="Inter, -apple-system, Segoe UI, Roboto, sans-serif" font-size="26" font-weight="600" fill="#a78bfa">socialpulsecrm.com</text>
+</svg>

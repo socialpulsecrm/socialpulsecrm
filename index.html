@@ -1,29 +1,825 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Pulse — Social Media Management</title>
-  <style>
-    body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 60px auto; padding: 0 20px; color: #1a1a1a; }
-    h1 { color: #6c2bd9; }
-    a { color: #6c2bd9; }
-    footer { margin-top: 60px; border-top: 1px solid #eee; padding-top: 20px; font-size: 14px; color: #666; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Primary SEO -->
+  <title>Social Pulse — AI Social Media Management for Creators, Brands &amp; Agencies</title>
+  <meta name="description" content="Social Pulse is the all-in-one AI social media platform. Schedule and publish to 12 platforms, reply from one unified inbox, run creator campaigns, and grow faster with 16 AI agents. Free plan — no credit card required." />
+  <meta name="keywords" content="social media management, AI social media, schedule posts, social media scheduler, content calendar, creator marketplace, social media analytics, unified inbox, link in bio, Buffer alternative, Hootsuite alternative" />
+  <meta name="author" content="Social Pulse" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://socialpulsecrm.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Social Pulse" />
+  <meta property="og:title" content="Social Pulse — AI Social Media Management for Creators, Brands &amp; Agencies" />
+  <meta property="og:description" content="Plan, publish, engage and grow across 12 platforms — with 16 AI agents that write, schedule, reply and report for you. Free plan, no credit card." />
+  <meta property="og:url" content="https://socialpulsecrm.com/" />
+  <meta property="og:image" content="https://socialpulsecrm.com/assets/og-image.svg" />
+  <meta property="og:image:type" content="image/svg+xml" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Social Pulse — AI social media management platform" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Social Pulse — AI Social Media Management" />
+  <meta name="twitter:description" content="Plan, publish, engage and grow across 12 platforms with 16 AI agents. Free plan, no credit card." />
+  <meta name="twitter:image" content="https://socialpulsecrm.com/assets/og-image.svg" />
+
+  <!-- Icons / manifest -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" /></noscript>
+
+  <!-- Styles (modular — see /css) -->
+  <link rel="stylesheet" href="/css/tokens.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/buttons.css" />
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/hero.css" />
+  <link rel="stylesheet" href="/css/features.css" />
+  <link rel="stylesheet" href="/css/ai.css" />
+  <link rel="stylesheet" href="/css/audience.css" />
+  <link rel="stylesheet" href="/css/pricing.css" />
+  <link rel="stylesheet" href="/css/faq.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://socialpulsecrm.com/#org",
+        "name": "Social Pulse",
+        "url": "https://socialpulsecrm.com/",
+        "logo": "https://socialpulsecrm.com/assets/favicon.svg",
+        "description": "All-in-one AI social media management platform for creators, brands and agencies.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@socialpulsecrm.com",
+          "url": "https://socialpulsecrm.com/contact/"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Social Pulse",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://socialpulsecrm.com/",
+        "description": "Schedule and publish to 12 platforms, reply from one unified inbox, run creator campaigns, and grow with 16 AI agents.",
+        "offers": [
+          { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Pro", "price": "19", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Enterprise", "price": "49", "priceCurrency": "USD" }
+        ],
+        "featureList": "Multi-platform scheduling, AI content generation, unified inbox, analytics and reports, creator campaigns and marketplace, team collaboration and approvals, link-in-bio"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which social platforms does Social Pulse support?", "acceptedAnswer": { "@type": "Answer", "text": "Social Pulse publishes to 12 platforms: Instagram, YouTube, TikTok, X (Twitter), LinkedIn, Threads, Bluesky, Facebook Pages, Facebook Groups, Pinterest, Reddit and Mastodon. You can also manage Email, WhatsApp and Google Business conversations from the unified inbox." } },
+          { "@type": "Question", "name": "Is there a free plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Free plan includes 3 connected channels, 2 team seats, AI assistance, the content calendar, the unified inbox and basic analytics — with no credit card required." } },
+          { "@type": "Question", "name": "What can the AI do?", "acceptedAnswer": { "@type": "Answer", "text": "Social Pulse ships 16 AI agents that draft captions and hashtags in your brand voice, recommend the best time to post, surface trends, suggest replies, match creators to campaigns, repurpose one post into platform-native variants, and turn analytics into plain-English insights." } },
+          { "@type": "Question", "name": "Can my team collaborate?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Invite teammates with five role levels (Owner, Admin, Editor, Contributor, Viewer), run multi-stage approval workflows, and customise permissions per member." } },
+          { "@type": "Question", "name": "Can agencies manage multiple clients?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Agencies get a separate workspace per client, roles and approvals per workspace, shared channels, and cross-client analytics in one place." } },
+          { "@type": "Question", "name": "Is my data secure?", "acceptedAnswer": { "@type": "Answer", "text": "All OAuth tokens are encrypted at rest with AES-256-GCM, data is stored in secured PostgreSQL databases, and you can disconnect any account or delete your data at any time." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <h1>Social Pulse</h1>
-  <p>AI-powered social media management platform for creators and businesses. Schedule, publish, and analyze content across Instagram, Facebook, YouTube, TikTok, Twitter, LinkedIn, Pinterest, and more.</p>
-  <p><strong>Features:</strong></p>
-  <ul>
-    <li>Multi-platform scheduling & publishing</li>
-    <li>AI content optimization</li>
-    <li>Analytics dashboard</li>
-    <li>Team collaboration</li>
-  </ul>
-  <footer>
-    <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Service</a>
-    <br><br>&copy; 2026 Social Pulse. All rights reserved.
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="/" aria-label="Social Pulse home">
+        <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect width="40" height="40" rx="11" fill="url(#bg)" />
+          <path d="M7 21h5l3-9 5 16 3-10 2 3h8" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1" /><stop offset="1" stop-color="#9333ea" />
+            </linearGradient>
+          </defs>
+        </svg>
+        Social Pulse
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#ai">AI</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn-ghost btn-sm" href="https://app.socialpulsecrm.com/login">Log in</a>
+        <a class="btn btn-primary btn-sm" href="https://app.socialpulsecrm.com/register">Get started free</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="navMobile">
+      <a href="#features">Features</a>
+      <a href="#ai">AI</a>
+      <a href="#audience">Who it's for</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="/contact/">Contact</a>
+      <div class="nav__mobile-sep"></div>
+      <a class="btn btn-ghost" href="https://app.socialpulsecrm.com/login">Log in</a>
+      <a class="btn btn-primary" href="https://app.socialpulsecrm.com/register">Get started free</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <span class="eyebrow">All-in-one · AI-native</span>
+          <h1>The AI social media platform for <span class="gradient-text">creators, brands &amp; agencies</span></h1>
+          <p class="hero__sub">Plan, publish, engage and grow across 12 platforms — with 16 AI agents that write, schedule, reply and report for you. One calm workspace instead of a dozen tabs.</p>
+          <div class="hero__cta">
+            <a class="btn btn-primary btn-lg" href="https://app.socialpulsecrm.com/register">
+              Get started free
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#features">Explore features</a>
+          </div>
+          <div class="hero__trust">
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 12 platforms</span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 16 AI agents</span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> No credit card required</span>
+          </div>
+        </div>
+
+        <!-- product mock -->
+        <div class="hero__media reveal" aria-hidden="true">
+          <div class="mock">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__post">
+              <div class="mock__row">
+                <div class="mock__avatar"></div>
+                <div>
+                  <div class="mock__name">Your Brand</div>
+                  <div class="mock__handle">@yourbrand · scheduled for 6:00 PM</div>
+                </div>
+              </div>
+              <p class="mock__text">Launch day is here 🚀 Meet the all-in-one workspace your social team has been waiting for. <b>#socialmedia</b> <b>#AI</b></p>
+              <div class="mock__media"></div>
+              <div class="mock__channels">
+                <i><svg viewBox="0 0 24 24" fill="currentColor" style="color:#E1306C"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.5.4.7.8.9 1.4.2.5.4 1.1.4 2.3.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2a3.8 3.8 0 0 1-.9 1.4c-.4.5-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.5.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 1.8a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8Zm6.4-3.1a1.45 1.45 0 1 1 0 2.9 1.45 1.45 0 0 1 0-2.9Z"/></svg></i>
+                <i><svg viewBox="0 0 24 24" fill="currentColor" style="color:#0A66C2"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3v9Zm-1.5-10.3a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5ZM19 19h-3v-4.7c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.2h.1a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7V19Z"/></svg></i>
+                <i><svg viewBox="0 0 24 24" fill="currentColor" style="color:#000"><path d="M13.5 2h3.2l-7 8 8.3 12h-6.5l-5-7.4L4 22H.8l7.6-8.6L0 2h6.6l4.6 6.8L13.5 2Zm-1.1 18h1.8L6.2 3.8H4.3L12.4 20Z"/></svg></i>
+                <i><svg viewBox="0 0 24 24" fill="currentColor" style="color:#FF0000"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.5.5-4.5.5-4.5s0-3-.5-4.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg></i>
+              </div>
+            </div>
+          </div>
+          <div class="chip chip--ai">
+            <span class="chip__icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.8 4.7L18.5 9l-4.7 1.3L12 15l-1.8-4.7L5.5 9l4.7-1.3L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span>AI caption<small>Drafted in your voice</small></span>
+          </div>
+          <div class="chip chip--stat">
+            <span class="chip__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m0 14h16M8 17v-5m4 5V8m4 9v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span>+38% reach<small>Best time to post</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS BAND ================= -->
+    <section class="stats-band">
+      <div class="container">
+        <div class="stats-band__grid">
+          <div class="stat-item reveal"><b class="gradient-text">12</b><span>Social platforms</span></div>
+          <div class="stat-item reveal"><b class="gradient-text">16</b><span>AI agents</span></div>
+          <div class="stat-item reveal"><b class="gradient-text">5</b><span>Team role levels</span></div>
+          <div class="stat-item reveal"><b class="gradient-text">1</b><span>Unified workspace</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LOGO STRIP ================= -->
+    <section class="logos">
+      <div class="container">
+        <p class="logos__label">Publish &amp; engage across every major network</p>
+        <div class="logos__row">
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.5.4.7.8.9 1.4.2.5.4 1.1.4 2.3.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2a3.8 3.8 0 0 1-.9 1.4c-.4.5-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.5.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 1.8a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8Zm6.4-3.1a1.45 1.45 0 1 1 0 2.9 1.45 1.45 0 0 1 0-2.9Z"/></svg> Instagram</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.5.5-4.5.5-4.5s0-3-.5-4.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg> YouTube</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.4 1.6 4.2 4 4.6v2.8c-1.4.1-2.7-.3-4-1v6.1a6.3 6.3 0 1 1-6.3-6.3c.3 0 .6 0 .9.1v3a3.3 3.3 0 1 0 2.4 3.2V2h3Z"/></svg> TikTok</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 2h3.2l-7 8 8.3 12h-6.5l-5-7.4L4 22H.8l7.6-8.6L0 2h6.6l4.6 6.8L13.5 2Zm-1.1 18h1.8L6.2 3.8H4.3L12.4 20Z"/></svg> X</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3v9Zm-1.5-10.3a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5ZM19 19h-3v-4.7c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.2h.1a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7V19Z"/></svg> LinkedIn</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.3 11.6c-.2 0-.3-.1-.5-.1-2.6-.5-3.7-2.2-4.1-3.3 1 .1 2-.1 2.9-.6a4 4 0 0 0 1.4-1.3c-.6-.4-1.1-.9-1.5-1.5-.6-.9-.9-2-.9-3h-2.9v11.7c0 1.3-1 2.4-2.4 2.4a2.4 2.4 0 0 1-1.2-4.5 2.4 2.4 0 0 1 1.6-.2v-3a5.4 5.4 0 1 0 4.8 5.3v-5.7a7.7 7.7 0 0 0 4.4 1.4v-2.9c-.5 0-1 0-1.1-.2Z"/></svg> Threads</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c3.5 3.4 6.6 5 9 6.9 0 5.6-3.6 11-9 13C6.6 19.9 3 14.5 3 8.9 5.4 7 8.5 5.4 12 2Z"/></svg> Bluesky</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg> Facebook</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.5 19.4c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2.9.5 1.7 1.4 1.7 1.7 0 2.9-2.1 2.9-4.7 0-2-1.3-3.4-3.7-3.4a4.2 4.2 0 0 0-4.4 4.2c0 .8.3 1.4.7 1.8.2.2.2.3.1.5l-.2.9c-.1.3-.3.4-.6.2-1.1-.5-1.7-1.8-1.7-3.3 0-2.7 2-5.2 5.8-5.2 3 0 5.4 2.2 5.4 5.1 0 3-1.9 5.5-4.6 5.5-.9 0-1.7-.5-2-1l-.6 2.2c-.2.8-.7 1.7-1 2.3A10 10 0 1 0 12 2Z"/></svg> Pinterest</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-10 10c.3 0 .6 0 .9-.1a1.7 1.7 0 0 1-.1-.7c0-.4.2-2 .2-2s-.5-.9-.5-2.2c0-2 1.2-3.6 2.7-3.6 1.3 0 1.9 1 1.9 2.1 0 1.3-.8 3.2-1.3 5-.3 1.5.8 2.6 2.2 2.6A10 10 0 0 0 22 12Z"/></svg> Reddit</span>
+          <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.3 8.5c0-3.6-2.4-4.6-2.4-4.6A19 19 0 0 0 14 3l-.1.1c2.8.8 4.1 2.1 4.1 2.1A14 14 0 0 0 4.6 5.4a13 13 0 0 1 5.7-1.5h.1A19 19 0 0 0 5.4 4S3 4.9 3 8.5c0 0 0 4.7.5 7.6.3 1.9 3.3 4 6.5 4.1 0 0 .5-.6 1-1.2-1.9-.6-2.6-1.7-2.6-1.7l.6.3.1.1h.1a8.6 8.6 0 0 0 5.5.8 7 7 0 0 0 2.8-1l.1-.1s-.7 1.2-2.7 1.8c.4.6 1 1.2 1 1.2 3.2-.1 6.2-2.2 6.5-4.1.5-2.9.5-7.6.5-7.6Zm-5 5.4v-3.6c0-.8-.5-1.3-1.2-1.3-.8 0-1.2.5-1.4 1.2v3.2H12v-3.2c-.2-.7-.6-1.2-1.4-1.2-.7 0-1.2.5-1.2 1.3v3.6H7.6V10c0-1.4 1-2.4 2.4-2.4 1.3 0 1.7.6 2 1l.1.2.1-.2c.3-.4.7-1 2-1 1.4 0 2.4 1 2.4 2.4v3.9h-1.4Z"/></svg> Mastodon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PILLARS ================= -->
+    <section class="section-pad" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The complete toolkit</span>
+          <h2>Everything social, in one place</h2>
+          <p>Stop stitching together five tools. Social Pulse brings publishing, engagement, analytics and growth under one roof.</p>
+        </div>
+        <div class="pillars__grid">
+          <article class="pillar reveal">
+            <div class="pillar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 9h18M7 3v3m10-3v3M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Publish</h3>
+            <p>Schedule to 12 platforms at once with platform-perfect previews, first comments, threads and best-time slots.</p>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.8 4.7L18.5 9l-4.7 1.3L12 15l-1.8-4.7L5.5 9l4.7-1.3L12 3Zm6 11 .9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9.9-2.3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <h3>Create</h3>
+            <p>16 AI agents draft captions, hashtags and ideas in your brand voice — and repurpose one post for every channel.</p>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-3.6A8.4 8.4 0 1 1 21 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+            <h3>Engage</h3>
+            <p>One unified inbox for comments, DMs and mentions across every account — with AI replies and team assignments.</p>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m0 14h16M8 17v-6m4 6V8m4 9v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Analyze</h3>
+            <p>Reports that answer questions, not just show charts — audience, hashtags, organic vs boosted, and PDF exports.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section-pad" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>Up and running in minutes</h2>
+          <p>No lengthy setup. Connect, create and grow — Social Pulse handles the busywork.</p>
+        </div>
+        <div class="how__grid">
+          <article class="how__step reveal">
+            <div class="how__num">1</div>
+            <h3>Connect your channels</h3>
+            <p>Securely link your social accounts in a couple of clicks. Your tokens are encrypted, and you can disconnect anytime.</p>
+          </article>
+          <article class="how__step reveal">
+            <div class="how__num">2</div>
+            <h3>Create with AI</h3>
+            <p>Draft posts in your brand voice, get the best time to publish, and preview every platform before you schedule.</p>
+          </article>
+          <article class="how__step reveal">
+            <div class="how__num">3</div>
+            <h3>Publish &amp; grow</h3>
+            <p>Auto-publish everywhere, reply from one inbox, and watch the analytics turn into clear, actionable insights.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURE ROWS ================= -->
+    <section class="section-pad" style="padding-top:0">
+      <div class="container features">
+        <!-- Calendar -->
+        <div class="frow reveal">
+          <div class="frow__text">
+            <span class="frow__tag">Plan &amp; schedule</span>
+            <h3>A content calendar that thinks in time zones</h3>
+            <p>See your whole strategy at a glance in Month, Week, List or Queue view. Drag posts to reschedule, fill your posting queue automatically, and let best-time-to-post slots boost your reach.</p>
+            <ul class="frow__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Month, Week, List &amp; Queue views</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Best-time-to-post recommendations</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Drag-and-drop rescheduling &amp; CSV export</li>
+            </ul>
+          </div>
+          <div class="frow__media">
+            <div class="fcard">
+              <div class="fcard__head">
+                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M3 9h18M7 3v3m10-3v3M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8"/></svg> June 2026</span>
+                <span class="fcard__pill">Week</span>
+              </div>
+              <div class="cal">
+                <i>M</i><i>T</i><i>W</i><i>T</i><i>F</i><i>S</i><i>S</i>
+                <i>1</i><i class="has">2</i><i>3</i><i class="best">4★</i><i>5</i><i class="has">6</i><i>7</i>
+                <i>8</i><i>9</i><i class="best">10★</i><i class="has">11</i><i>12</i><i>13</i><i>14</i>
+                <i class="has">15</i><i>16</i><i>17</i><i class="best">18★</i><i>19</i><i class="has">20</i><i>21</i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Content Studio (replaces Grid Planner) -->
+        <div class="frow frow--reverse reveal">
+          <div class="frow__text">
+            <span class="frow__tag">AI Content Studio</span>
+            <h3>Create once, post everywhere — in your voice</h3>
+            <p>Draft, rewrite and generate posts with AI that's grounded in your brand voice and past content. Turn one idea into platform-native variants with the right hashtags and first comments, then preview exactly how each post will look before it goes live.</p>
+            <ul class="frow__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> AI captions, hashtags &amp; ideas in your brand voice</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> One draft → native variants for every platform</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Live, platform-accurate preview as you type</li>
+            </ul>
+          </div>
+          <div class="frow__media">
+            <div class="fcard">
+              <div class="fcard__head">
+                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.8 4.7L18.5 9l-4.7 1.3L12 15l-1.8-4.7L5.5 9l4.7-1.3L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> AI Studio</span>
+                <span class="fcard__pill">In your voice</span>
+              </div>
+              <div class="studio">
+                <div class="studio__tabs">
+                  <span class="studio__tab on">Instagram</span>
+                  <span class="studio__tab">LinkedIn</span>
+                  <span class="studio__tab">X</span>
+                </div>
+                <div class="studio__editor">Launch day is here 🚀 The all-in-one workspace your social team has been waiting for. <b>#socialmedia</b> <b>#AI</b><span class="studio__cursor"></span></div>
+                <div class="studio__ai">
+                  <span><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.5 4L17 8l-3.5 1L12 13l-1.5-4L7 8l3.5-1L12 3Z" stroke="currentColor" stroke-width="1.6"/></svg> Rewrite</span>
+                  <span>Shorten</span>
+                  <span>Add hashtags</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inbox -->
+        <div class="frow reveal">
+          <div class="frow__text">
+            <span class="frow__tag">Engagement</span>
+            <h3>Reply to everyone from a single inbox</h3>
+            <p>Pull comments, DMs and mentions from every channel into one premium 3-pane inbox. Triage with rules, assign to teammates, and reply 10× faster with AI-suggested, tone-matched responses.</p>
+            <ul class="frow__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Comments, DMs &amp; mentions in one place</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> AI replies, saved replies &amp; automation rules</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Assign, note &amp; resolve as a team</li>
+            </ul>
+          </div>
+          <div class="frow__media">
+            <div class="fcard">
+              <div class="fcard__head">
+                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-3.6A8.4 8.4 0 1 1 21 11.5Z" stroke="currentColor" stroke-width="1.8"/></svg> Inbox</span>
+                <span class="fcard__pill">3 new</span>
+              </div>
+              <div class="inbox">
+                <div class="inbox__item">
+                  <div class="inbox__av"></div>
+                  <div>
+                    <div class="inbox__name">@maya.creates</div>
+                    <div class="inbox__msg">Loved this! Where's the template? 🙌</div>
+                    <span class="inbox__ai"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.5 4L17 8l-3.5 1L12 13l-1.5-4L7 8l3.5-1L12 3Z" stroke="currentColor" stroke-width="1.6"/></svg> Suggested reply ready</span>
+                  </div>
+                </div>
+                <div class="inbox__item">
+                  <div class="inbox__av"></div>
+                  <div>
+                    <div class="inbox__name">@founderjon</div>
+                    <div class="inbox__msg">Can we collab on a campaign?</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytics -->
+        <div class="frow frow--reverse reveal">
+          <div class="frow__text">
+            <span class="frow__tag">Analytics &amp; reports</span>
+            <h3>Answers, not just analytics</h3>
+            <p>Track impressions, reach and engagement for every post and channel. Go deeper with audience demographics, hashtag performance, organic-vs-boosted breakdowns and shareable PDF reports.</p>
+            <ul class="frow__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Cross-channel performance dashboard</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Audience, hashtags &amp; competitive insights</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Plain-English AI narratives &amp; PDF export</li>
+            </ul>
+          </div>
+          <div class="frow__media">
+            <div class="fcard">
+              <div class="fcard__head">
+                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m0 14h16M8 17v-6m4 6V8m4 9v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Performance</span>
+                <span class="fcard__pill">+24% MoM</span>
+              </div>
+              <div class="statline">
+                <div><b>128K</b><small>Reach</small></div>
+                <div><b>9.4K</b><small>Engagements</small></div>
+                <div><b>6.1%</b><small>Eng. rate</small></div>
+              </div>
+              <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team collaboration & approvals (new) -->
+        <div class="frow reveal">
+          <div class="frow__text">
+            <span class="frow__tag">Teams &amp; approvals</span>
+            <h3>Collaborate without the chaos</h3>
+            <p>Invite your team with five role levels, route posts through multi-stage approval workflows, and keep everyone aligned with comments, notes and a full activity log. Nothing goes live until it's approved.</p>
+            <ul class="frow__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Roles: Owner, Admin, Editor, Contributor, Viewer</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Multi-stage approval workflows</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Per-member permissions, comments &amp; audit log</li>
+            </ul>
+          </div>
+          <div class="frow__media">
+            <div class="fcard">
+              <div class="fcard__head">
+                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M16 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm13 8v-1a4 4 0 0 0-3-3.9M16 4.1a4 4 0 0 1 0 7.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Approvals</span>
+                <span class="fcard__pill">2 stages</span>
+              </div>
+              <div class="appr">
+                <div class="appr__row">
+                  <div class="appr__av"></div>
+                  <div><div class="appr__name">Drafted by Maya</div><div class="appr__role">Contributor</div></div>
+                  <span class="appr__tag done">Submitted</span>
+                </div>
+                <div class="appr__row">
+                  <div class="appr__av"></div>
+                  <div><div class="appr__name">Review by Sam</div><div class="appr__role">Editor</div></div>
+                  <span class="appr__tag wait">Pending</span>
+                </div>
+                <div class="appr__row">
+                  <div class="appr__av"></div>
+                  <div><div class="appr__name">Approve by You</div><div class="appr__role">Owner</div></div>
+                  <span class="appr__tag">Queued</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campaigns + marketplace -->
+        <div class="frow frow--reverse reveal">
+          <div class="frow__text">
+            <span class="frow__tag">Campaigns &amp; marketplace</span>
+            <h3>Run creator campaigns end to end</h3>
+            <p>Brands launch campaigns with AI-assisted briefs and get matched with the right creators by niche, engagement and audience. Creators discover campaigns in the marketplace and apply. Everyone tracks deliverables, ROI and payments in one flow.</p>
+            <ul class="frow__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> AI creator matching &amp; authenticity scoring</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Public marketplace + application workflow</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Deliverables, ROI tracking &amp; payouts</li>
+            </ul>
+          </div>
+          <div class="frow__media">
+            <div class="fcard">
+              <div class="fcard__head">
+                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11l18-8-8 18-2.5-7.5L3 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Creator matches</span>
+                <span class="fcard__pill">Match score</span>
+              </div>
+              <div class="camp">
+                <div class="camp__row"><div class="camp__av"></div><div><div class="camp__name">@fit.with.lea</div><div class="camp__meta">Fitness · 86K · 7.2% eng.</div></div><div class="camp__score">94%</div></div>
+                <div class="camp__row"><div class="camp__av"></div><div><div class="camp__name">@techbyraj</div><div class="camp__meta">Tech · 120K · 5.1% eng.</div></div><div class="camp__score">88%</div></div>
+                <div class="camp__row"><div class="camp__av"></div><div><div class="camp__name">@cook.with.mia</div><div class="camp__meta">Food · 54K · 9.0% eng.</div></div><div class="camp__score">81%</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Link in bio + monetization -->
+        <div class="frow reveal">
+          <div class="frow__text">
+            <span class="frow__tag">Grow &amp; monetize</span>
+            <h3>Turn your bio link into a revenue engine</h3>
+            <p>Build a branded link-in-bio page, shorten and brand your URLs with UTM tracking, and tie promo codes to conversions so you can prove ROI on every post — all without leaving Social Pulse.</p>
+            <ul class="frow__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Customizable link-in-bio start page</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Branded short links with click analytics</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Promo codes, attribution &amp; revenue tracking</li>
+            </ul>
+          </div>
+          <div class="frow__media">
+            <div class="fcard">
+              <div class="fcard__head">
+                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M9 15l6-6M10 6l1-1a4 4 0 0 1 6 6l-1 1M14 18l-1 1a4 4 0 0 1-6-6l1-1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Your link in bio</span>
+                <span class="fcard__pill">1.2K clicks</span>
+              </div>
+              <div class="bio">
+                <div class="bio__top"><i></i><b>@yourbrand</b></div>
+                <div class="bio__link brand">🛍️ Shop the collection</div>
+                <div class="bio__link">▶️ Latest YouTube video</div>
+                <div class="bio__link">💌 Join the newsletter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AI ================= -->
+    <section class="ai section-pad" id="ai">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">AI-native, end to end</span>
+          <h2>Meet your <span class="gradient-text">16 AI agents</span></h2>
+          <p>Not a single chatbot bolted on the side — a team of specialized agents working across every part of your social workflow, grounded in your brand voice and your own data.</p>
+        </div>
+        <div class="ai__grid">
+          <article class="acard reveal">
+            <div class="acard__icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.8 4.7L18.5 9l-4.7 1.3L12 15l-1.8-4.7L5.5 9l4.7-1.3L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <div><h4>Brand-voice content</h4><p>Captions, hashtags and ideas drafted in your tone, grounded in your past posts.</p></div>
+          </article>
+          <article class="acard reveal">
+            <div class="acard__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 8-9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>Trends &amp; growth copilot</h4><p>Live trend discovery plus daily recommendations on what to post and when.</p></div>
+          </article>
+          <article class="acard reveal">
+            <div class="acard__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 7V3M5 12H3m18 0h-2M7.8 7.8 6.3 6.3M12 8a4 4 0 0 1 4 4c0 1.7-1 2.6-1.6 3.3-.5.6-.4 1.2-.4 1.7H10c0-.5.1-1.1-.4-1.7C9 14.6 8 13.7 8 12a4 4 0 0 1 4-4ZM10 20h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>Ask AI, everywhere</h4><p>A floating assistant on every page that knows your campaigns, posts and stats.</p></div>
+          </article>
+          <article class="acard reveal">
+            <div class="acard__icon"><svg viewBox="0 0 24 24" fill="none"><path d="m21 21-4.3-4.3M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <div><h4>Creator matching</h4><p>Multi-factor scoring matches brands to the right creators and re-ranks with AI.</p></div>
+          </article>
+          <article class="acard reveal">
+            <div class="acard__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2M4 7h16M4 7l1 12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1l1-12M9 11h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>One post → every platform</h4><p>Repurpose an approved post into native variants for each channel automatically.</p></div>
+          </article>
+          <article class="acard reveal">
+            <div class="acard__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Zm9-9v18M3 12h18" stroke="currentColor" stroke-width="1.6"/></svg></div>
+            <div><h4>Listening &amp; competitive</h4><p>Monitor mentions and sentiment, and benchmark against competitors.</p></div>
+          </article>
+        </div>
+        <p class="pricing__note reveal" style="margin-top:34px">Plus agents for scheduling, publishing, analytics narratives, campaign briefs, link-in-bio optimization, studio image &amp; video intelligence, and more.</p>
+      </div>
+    </section>
+
+    <!-- ================= AUDIENCE ================= -->
+    <section class="section-pad" id="audience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Made for you</span>
+          <h2>Whoever you are, we've got you covered</h2>
+          <p>One platform that grows with you — from your first post to managing dozens of clients.</p>
+        </div>
+        <div class="aud__grid">
+          <article class="aud aud--creator reveal">
+            <span class="aud__badge">Creators</span>
+            <h3>Grow from zero to one to a million</h3>
+            <p>Save every idea, learn what works, crosspost everywhere, and turn your audience into income.</p>
+            <ul class="aud__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Cross-post to every network in one click</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> AI captions, ideas &amp; best-time posting</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Brand-deal CRM, contracts &amp; payouts</li>
+            </ul>
+          </article>
+          <article class="aud aud--brand reveal">
+            <span class="aud__badge">Brands</span>
+            <h3>Launch campaigns that prove ROI</h3>
+            <p>Manage your own presence and run creator partnerships from a single workspace.</p>
+            <ul class="aud__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Discover &amp; match the right creators</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Briefs, deliverables &amp; approvals</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Attribution, promo codes &amp; revenue sync</li>
+            </ul>
+          </article>
+          <article class="aud aud--agency reveal">
+            <span class="aud__badge">Agencies</span>
+            <h3>Run every client from one cockpit</h3>
+            <p>A dedicated workspace per client, with roles, approvals and analytics that roll up.</p>
+            <ul class="aud__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Isolated workspace per client</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Multi-stage approval workflows</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Cross-client analytics &amp; team seats</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section class="pricing section-pad" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Simple, honest pricing</span>
+          <h2>Start free. Upgrade when you grow.</h2>
+          <p>No credit card to start. Every paid plan comes with a 14-day free trial.</p>
+        </div>
+
+        <div style="text-align:center">
+          <div class="ptoggle reveal" role="tablist" aria-label="Billing period">
+            <button id="billMonthly" class="active" role="tab" aria-selected="true">Monthly</button>
+            <button id="billYearly" role="tab" aria-selected="false">Yearly</button>
+          </div>
+          <span class="psave reveal">Save ~17% with yearly billing</span>
+        </div>
+
+        <div class="pgrid">
+          <!-- FREE -->
+          <article class="plan reveal">
+            <div class="plan__name">Free</div>
+            <p class="plan__desc">Everything you need to start showing up consistently.</p>
+            <div class="plan__price"><b>$0</b><span>/forever</span></div>
+            <div class="plan__inr">&nbsp;</div>
+            <a class="btn btn-ghost" href="https://app.socialpulsecrm.com/register">Get started free</a>
+            <ul class="plan__feats">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>3</b> connected channels</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>2</b> team seats</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>10 scheduled posts / channel</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>AI captions &amp; ideas (50K tokens/day)</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Calendar, unified inbox &amp; basic analytics</span></li>
+            </ul>
+          </article>
+
+          <!-- PRO -->
+          <article class="plan plan--featured reveal">
+            <span class="plan__flag">Most popular</span>
+            <div class="plan__name">Pro</div>
+            <p class="plan__desc">For serious creators and growing brands ready to scale.</p>
+            <div class="plan__price"><b data-monthly="$19" data-yearly="$16">$19</b><span data-monthly="/month" data-yearly="/month, billed yearly">/month</span></div>
+            <div class="plan__inr" data-monthly="₹1,499/mo" data-yearly="₹14,990/yr">₹1,499/mo</div>
+            <a class="btn btn-primary" href="https://app.socialpulsecrm.com/register">Start 14-day free trial</a>
+            <ul class="plan__feats">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Everything in Free, plus:</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>10</b> channels &amp; <b>10</b> team seats</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Unlimited</b> scheduling &amp; 200K AI tokens/day</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Advanced analytics, trends &amp; social listening</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Short links, reviews &amp; 10 GB storage</span></li>
+            </ul>
+          </article>
+
+          <!-- ENTERPRISE -->
+          <article class="plan reveal">
+            <div class="plan__name">Enterprise</div>
+            <p class="plan__desc">For agencies and teams that need scale and control.</p>
+            <div class="plan__price"><b data-monthly="$49" data-yearly="$41">$49</b><span data-monthly="/month" data-yearly="/month, billed yearly">/month</span></div>
+            <div class="plan__inr" data-monthly="₹4,999/mo" data-yearly="₹49,990/yr">₹4,999/mo</div>
+            <a class="btn btn-ghost" href="https://app.socialpulsecrm.com/register">Start 14-day free trial</a>
+            <ul class="plan__feats">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Everything in Pro, plus:</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Unlimited</b> channels &amp; team seats</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>1M AI tokens/day &amp; 100 GB storage</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Competitive intelligence &amp; approval workflows</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Multi-workspace agency management</span></li>
+            </ul>
+          </article>
+        </div>
+        <p class="pricing__note">Prices in USD. Indian pricing available in INR (₹) via Razorpay. Workspaces can be billed independently.</p>
+      </div>
+    </section>
+
+    <!-- ================= DIFFERENTIATORS ================= -->
+    <section class="section-pad" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why Social Pulse</span>
+          <h2>Built different</h2>
+          <p>Most tools do one thing. Social Pulse connects publishing, engagement, analytics and monetization with AI running through all of it.</p>
+        </div>
+        <div class="diff__grid">
+          <div class="diff reveal"><div class="diff__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><h4>Truly all-in-one</h4><p>Publish, engage, analyze, run campaigns and monetize — no tab-hopping, no duct-tape integrations.</p></div></div>
+          <div class="diff reveal"><div class="diff__icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.8 4.7L18.5 9l-4.7 1.3L12 15l-1.8-4.7L5.5 9l4.7-1.3L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div><h4>AI in your voice</h4><p>16 agents grounded in your brand guidelines and your own content — not generic boilerplate.</p></div></div>
+          <div class="diff reveal"><div class="diff__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h4>Made to monetize</h4><p>Creator marketplace, CRM, contracts, payments and attribution baked right in.</p></div></div>
+          <div class="diff reveal"><div class="diff__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4Zm0 5 9 4 9-4M3 17l9 4 9-4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div><div><h4>Agency-ready</h4><p>Multi-workspace model, granular roles and approvals built for managing many clients.</p></div></div>
+          <div class="diff reveal"><div class="diff__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h4>Secure by design</h4><p>OAuth tokens encrypted with AES-256, 2FA, audit logs and per-member permissions.</p></div></div>
+          <div class="diff reveal"><div class="diff__icon"><svg viewBox="0 0 24 24" fill="none"><path d="m8 6-6 6 6 6m8-12 6 6-6 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h4>Developer-friendly</h4><p>Full REST API, API keys and outbound webhooks to wire Social Pulse into your stack.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section-pad" id="faq" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions, answered</h2>
+        </div>
+        <div class="faq">
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Which social platforms are supported?<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+            <div class="faq__a"><p>You can publish and engage across 12 platforms: Instagram, YouTube, TikTok, X (Twitter), LinkedIn, Threads, Bluesky, Facebook Pages, Facebook Groups, Pinterest, Reddit and Mastodon. The unified inbox also brings in Email, WhatsApp and Google Business conversations.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Is there really a free plan?<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+            <div class="faq__a"><p>Yes. The Free plan includes 3 connected channels, 2 team seats, AI captions and ideas, the content calendar, the unified inbox and basic analytics — with no credit card required. Upgrade only when you need more.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">What can the AI actually do?<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+            <div class="faq__a"><p>Social Pulse ships 16 specialized AI agents. They draft captions and hashtags in your brand voice, recommend the best time to post, surface live trends, suggest replies in the inbox, match creators to campaigns, repurpose a post into platform-native variants, and turn analytics into plain-English insights — all grounded in your own data.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Can my team collaborate?<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+            <div class="faq__a"><p>Absolutely. Invite teammates with five role levels (Owner, Admin, Editor, Contributor, Viewer), set up multi-stage approval workflows so nothing goes out unreviewed, and fine-tune permissions per member.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Does it work for agencies with many clients?<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+            <div class="faq__a"><p>Yes. Agencies get a separate, isolated workspace for each client, with roles and approvals per workspace, shared channels for the team, and cross-client analytics that roll up into one view.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">Is my data secure?<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+            <div class="faq__a"><p>Security is built in. OAuth tokens are encrypted at rest with AES-256-GCM, data lives in secured PostgreSQL databases, two-factor authentication and audit logs are available, and you can disconnect any account or request full data deletion at any time. See our <a href="/privacy/">Privacy Policy</a>.</p></div>
+          </div>
+        </div>
+
+        <div class="faq__more reveal">
+          <p>Still have questions? <strong>We're happy to help.</strong></p>
+          <a class="btn btn-ghost" href="/contact/">Contact us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section-pad" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Your whole social presence, finally in one place</h2>
+          <p>Join Social Pulse and start planning, publishing and growing with AI today. Free to start — no credit card required.</p>
+          <div class="cta__btns">
+            <a class="btn btn-primary btn-lg" href="https://app.socialpulsecrm.com/register">Get started free</a>
+            <a class="btn btn-light btn-lg" href="https://app.socialpulsecrm.com/login">Log in</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="/" aria-label="Social Pulse home">
+            <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect width="40" height="40" rx="11" fill="url(#bg2)" />
+              <path d="M7 21h5l3-9 5 16 3-10 2 3h8" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+              <defs><linearGradient id="bg2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1" /><stop offset="1" stop-color="#9333ea" /></linearGradient></defs>
+            </svg>
+            Social Pulse
+          </a>
+          <p>The AI social media platform for creators, brands and agencies.</p>
+          <div class="footer__social">
+            <a href="https://app.socialpulsecrm.com/register" aria-label="Get started">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h5>Product</h5>
+            <a href="#features">Features</a>
+            <a href="#ai">AI agents</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer__col">
+            <h5>Made for</h5>
+            <a href="#audience">Creators</a>
+            <a href="#audience">Brands</a>
+            <a href="#audience">Agencies</a>
+          </div>
+          <div class="footer__col">
+            <h5>Account</h5>
+            <a href="https://app.socialpulsecrm.com/register">Get started</a>
+            <a href="https://app.socialpulsecrm.com/login">Log in</a>
+            <a href="/contact/">Contact &amp; help</a>
+          </div>
+          <div class="footer__col">
+            <h5>Legal</h5>
+            <a href="/privacy/">Privacy Policy</a>
+            <a href="/terms/">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Social Pulse. All rights reserved.</span>
+        <nav aria-label="Legal">
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+        </nav>
+      </div>
+    </div>
   </footer>
+
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>

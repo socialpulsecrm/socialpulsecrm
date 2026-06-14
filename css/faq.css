@@ -1,0 +1,68 @@
+/* ============================================================
+   FAQ — accordion + "still have questions" contact prompt
+   ============================================================ */
+
+.faq {
+  max-width: 800px;
+  margin-inline: auto;
+}
+.faq__item {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq__q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 19px 22px;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+.faq__q svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  color: var(--muted);
+  transition: transform 0.25s ease;
+}
+.faq__item.open .faq__q svg {
+  transform: rotate(45deg);
+  color: var(--brand-600);
+}
+.faq__a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq__a p {
+  padding: 0 22px 20px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.faq__more {
+  max-width: 800px;
+  margin: 28px auto 0;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 26px;
+}
+.faq__more p {
+  color: var(--muted);
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+.faq__more strong {
+  color: var(--ink);
+}

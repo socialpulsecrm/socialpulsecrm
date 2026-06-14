@@ -1,0 +1,118 @@
+/* ============================================================
+   Audience cards + Why-us differentiators
+   ============================================================ */
+
+.aud__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+.aud {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.aud__badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 13px;
+  border-radius: var(--r-full);
+  color: #fff;
+  margin-bottom: 16px;
+}
+.aud--creator .aud__badge {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+.aud--brand .aud__badge {
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+}
+.aud--agency .aud__badge {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+.aud h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.aud > p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.aud__list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.aud__list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.94rem;
+  color: var(--text);
+}
+.aud__list svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin-top: 2px;
+  color: var(--brand-600);
+}
+@media (min-width: 920px) {
+  .aud__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Differentiators ---------- */
+.diff__grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+.diff {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 22px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.diff__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-md);
+  flex: none;
+  display: grid;
+  place-items: center;
+  color: var(--brand-600);
+  background: var(--gradient-soft);
+}
+.diff__icon svg {
+  width: 21px;
+  height: 21px;
+}
+.diff h4 {
+  font-size: 1.02rem;
+  margin-bottom: 5px;
+}
+.diff p {
+  color: var(--muted);
+  font-size: 0.91rem;
+}
+@media (min-width: 700px) {
+  .diff__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1020px) {
+  .diff__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
