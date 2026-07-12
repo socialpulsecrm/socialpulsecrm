@@ -6,6 +6,14 @@
   background: var(--bg-2);
   border-block: 1px solid var(--border-soft);
 }
+.pricing-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 .ptoggle {
   display: inline-flex;
   align-items: center;
@@ -14,7 +22,7 @@
   border: 1px solid var(--border);
   border-radius: var(--r-full);
   padding: 5px;
-  margin: 0 auto 14px;
+  margin: 0;
 }
 .ptoggle button {
   border: 0;
@@ -24,6 +32,7 @@
   font-weight: 600;
   font-size: 0.92rem;
   color: var(--muted);
+  cursor: pointer;
   transition: color 0.18s ease, background 0.18s ease;
 }
 .ptoggle button.active {
@@ -36,7 +45,7 @@
   color: var(--success);
   font-weight: 600;
   font-size: 0.86rem;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 .pgrid {
   display: grid;
@@ -106,6 +115,13 @@
   font-size: 0.82rem;
   min-height: 18px;
 }
+.plan-monthly-eq {
+  color: var(--success);
+  font-weight: 600;
+  font-size: 0.86rem;
+  min-height: 18px;
+  margin-top: 2px;
+}
 .plan .btn {
   width: 100%;
   margin: 22px 0;
@@ -143,7 +159,15 @@
   .pgrid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .plan--featured {
+  .pgrid.pgrid--single {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .pgrid.pgrid--single .plan--featured {
+    transform: none;
+  }
+  .pgrid:not(.pgrid--single) .plan--featured {
     transform: scale(1.03);
   }
 }

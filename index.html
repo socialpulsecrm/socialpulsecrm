@@ -623,61 +623,132 @@
           <p>No credit card to start. Every paid plan comes with a 14-day free trial.</p>
         </div>
 
-        <div style="text-align:center">
-          <div class="ptoggle reveal" role="tablist" aria-label="Billing period">
+        <div class="pricing-controls reveal">
+          <div class="ptoggle" role="tablist" aria-label="Billing cycle">
             <button id="billMonthly" class="active" role="tab" aria-selected="true">Monthly</button>
             <button id="billYearly" role="tab" aria-selected="false">Yearly</button>
           </div>
-          <span class="psave reveal">Save ~17% with yearly billing</span>
+          
+          <div class="ptoggle" role="tablist" aria-label="Currency selection">
+            <button id="currUsd" class="active" role="tab" aria-selected="true">$ USD</button>
+            <button id="currInr" role="tab" aria-selected="false">₹ INR</button>
+          </div>
         </div>
 
-        <div class="pgrid">
-          <!-- FREE -->
-          <article class="plan reveal">
+        <div class="pricing-controls reveal" style="margin-bottom: 40px;">
+          <div class="ptoggle" role="tablist" aria-label="Product plan type">
+            <button id="prodCreator" class="active" role="tab" aria-selected="true">Creator</button>
+            <button id="prodBrand" role="tab" aria-selected="false">Brand</button>
+            <button id="prodAgency" role="tab" aria-selected="false">Agency</button>
+          </div>
+        </div>
+
+        <div class="pgrid pgrid--triple" id="pricingGrid">
+          <!-- FREE (Creator) -->
+          <article class="plan plan-card" data-product="creator" id="planFree">
             <div class="plan__name">Free</div>
-            <p class="plan__desc">Everything you need to start showing up consistently.</p>
-            <div class="plan__price"><b>$0</b><span>/forever</span></div>
-            <div class="plan__inr">&nbsp;</div>
+            <p class="plan__desc">Everything you need to start creating and growing.</p>
+            <div class="plan__price">
+              <b class="price-val" 
+                 data-usd-monthly="Free" data-usd-yearly="Free" 
+                 data-inr-monthly="Free" data-inr-yearly="Free">Free</b>
+              <span class="price-period" data-monthly="" data-yearly=""></span>
+            </div>
+            <div class="plan-monthly-eq">&nbsp;</div>
             <a class="btn btn-ghost" href="https://app.socialpulsecrm.com/register">Get started free</a>
             <ul class="plan__feats">
               <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>3</b> connected channels</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>2</b> team seats</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>10 scheduled posts / channel</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>AI captions &amp; ideas (50K tokens/day)</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Calendar, unified inbox &amp; basic analytics</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>50k</b> AI tokens / day</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Content calendar &amp; scheduling</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Unified inbox &amp; AI replies</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>2</b> team seats · 10 posts / channel</span></li>
             </ul>
           </article>
 
-          <!-- PRO -->
-          <article class="plan plan--featured reveal">
+          <!-- PRO (Creator) -->
+          <article class="plan plan--featured plan-card" data-product="creator" id="planPro">
             <span class="plan__flag">Most popular</span>
             <div class="plan__name">Pro</div>
-            <p class="plan__desc">For serious creators and growing brands ready to scale.</p>
-            <div class="plan__price"><b data-monthly="$19" data-yearly="$16">$19</b><span data-monthly="/month" data-yearly="/month, billed yearly">/month</span></div>
-            <div class="plan__inr" data-monthly="₹1,499/mo" data-yearly="₹14,990/yr">₹1,499/mo</div>
+            <p class="plan__desc">For serious creators scaling their presence.</p>
+            <div class="plan__price">
+              <b class="price-val" 
+                 data-usd-monthly="$29" data-usd-yearly="$290" 
+                 data-inr-monthly="₹2,499" data-inr-yearly="₹24,990">$29</b>
+              <span class="price-period" data-monthly="/mo" data-yearly="/yr">/mo</span>
+            </div>
+            <div class="plan-monthly-eq" data-usd-yearly="That's just $24/mo" data-inr-yearly="That's just ₹2,083/mo">&nbsp;</div>
             <a class="btn btn-primary" href="https://app.socialpulsecrm.com/register">Start 14-day free trial</a>
             <ul class="plan__feats">
               <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Everything in Free, plus:</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>10</b> channels &amp; <b>10</b> team seats</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Unlimited</b> scheduling &amp; 200K AI tokens/day</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Advanced analytics, trends &amp; social listening</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Short links, reviews &amp; 10 GB storage</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>10</b> connected channels</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>200k</b> AI tokens / day</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Advanced analytics &amp; exports</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Social listening &amp; revenue tracking</span></li>
             </ul>
           </article>
 
-          <!-- ENTERPRISE -->
-          <article class="plan reveal">
-            <div class="plan__name">Enterprise</div>
-            <p class="plan__desc">For agencies and teams that need scale and control.</p>
-            <div class="plan__price"><b data-monthly="$49" data-yearly="$41">$49</b><span data-monthly="/month" data-yearly="/month, billed yearly">/month</span></div>
-            <div class="plan__inr" data-monthly="₹4,999/mo" data-yearly="₹49,990/yr">₹4,999/mo</div>
+          <!-- ENTERPRISE (Creator) -->
+          <article class="plan plan-card" data-product="creator" id="planCreatorEnterprise">
+            <div class="plan__name">Creator Enterprise</div>
+            <p class="plan__desc">Maximum AI and unlimited everything.</p>
+            <div class="plan__price">
+              <b class="price-val" 
+                 data-usd-monthly="$49" data-usd-yearly="$490" 
+                 data-inr-monthly="₹4,999" data-inr-yearly="₹49,990">$49</b>
+              <span class="price-period" data-monthly="/mo" data-yearly="/yr">/mo</span>
+            </div>
+            <div class="plan-monthly-eq" data-usd-yearly="That's just $41/mo" data-inr-yearly="That's just ₹4,166/mo">&nbsp;</div>
             <a class="btn btn-ghost" href="https://app.socialpulsecrm.com/register">Start 14-day free trial</a>
             <ul class="plan__feats">
               <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Everything in Pro, plus:</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Unlimited</b> channels &amp; team seats</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>1M AI tokens/day &amp; 100 GB storage</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Competitive intelligence &amp; approval workflows</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Multi-workspace agency management</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>Unlimited</b> connected channels</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><b>1M</b> AI tokens / day</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Competitive intelligence &amp; trends</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Best-in-class AI models &amp; support</span></li>
+            </ul>
+          </article>
+
+          <!-- BRAND (Brand) -->
+          <article class="plan plan--featured plan-card" data-product="brand" id="planBrand" style="display: none;">
+            <span class="plan__flag">Enterprise</span>
+            <div class="plan__name">Brand</div>
+            <p class="plan__desc">A full brand workspace with creator &amp; campaign teams.</p>
+            <div class="plan__price">
+              <b class="price-val" 
+                 data-usd-monthly="$89" data-usd-yearly="$890" 
+                 data-inr-monthly="₹6,999" data-inr-yearly="₹69,990">$89</b>
+              <span class="price-period" data-monthly="/mo" data-yearly="/yr">/mo</span>
+            </div>
+            <div class="plan-monthly-eq" data-usd-yearly="That's just $74/mo" data-inr-yearly="That's just ₹5,833/mo">&nbsp;</div>
+            <a class="btn btn-primary" href="https://app.socialpulsecrm.com/register">Start 14-day free trial</a>
+            <ul class="plan__feats">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span class="seat-text" data-usd-monthly="4 seats included · $14 / extra seat" data-usd-yearly="4 seats included · $140 / extra seat / yr" data-inr-monthly="4 seats included · ₹1,100 / extra seat" data-inr-yearly="4 seats included · ₹11,000 / extra seat / yr">4 seats included · $14 / extra seat</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Creator &amp; Campaign teams</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Brand Creator &amp; Campaign Manager roles</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Shared workspace AI + 2M token pool / day</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Approval workflows &amp; activity log</span></li>
+            </ul>
+          </article>
+
+          <!-- AGENCY (Agency) -->
+          <article class="plan plan--featured plan-card" data-product="agency" id="planAgency" style="display: none;">
+            <span class="plan__flag">Enterprise</span>
+            <div class="plan__name">Agency</div>
+            <p class="plan__desc">Run unlimited client workspaces from one account.</p>
+            <div class="plan__price">
+              <b class="price-val" 
+                 data-usd-monthly="$89" data-usd-yearly="$890" 
+                 data-inr-monthly="₹6,999" data-inr-yearly="₹69,990">$89</b>
+              <span class="price-period" data-monthly="/mo" data-yearly="/yr">/mo</span>
+            </div>
+            <div class="plan-monthly-eq" data-usd-yearly="That's just $74/mo" data-inr-yearly="That's just ₹5,833/mo">&nbsp;</div>
+            <a class="btn btn-primary" href="https://app.socialpulsecrm.com/register">Start 14-day free trial</a>
+            <ul class="plan__feats">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Unlimited client workspaces</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span class="seat-text" data-usd-monthly="4 agency seats · $14 / extra seat" data-usd-yearly="4 agency seats · $140 / extra seat / yr" data-inr-monthly="4 agency seats · ₹1,100 / extra seat" data-inr-yearly="4 agency seats · ₹11,000 / extra seat / yr">4 agency seats · $14 / extra seat</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Cross-workspace analytics &amp; dashboards</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Agency-wide AI pool + 3M tokens / day</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Impersonate any workspace as Admin</span></li>
             </ul>
           </article>
         </div>
