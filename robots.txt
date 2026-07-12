@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
+Allow: /assets/
+
+# Explicitly allow Googlebot to crawl favicon and icons for Search listing logo
+User-agent: Googlebot
+Allow: /assets/favicon-48.png
+Allow: /assets/favicon-192.png
+Allow: /assets/favicon-512.png
+Allow: /assets/favicon.svg
+Allow: /site.webmanifest
 
 Sitemap: https://socialpulsecrm.com/sitemap.xml

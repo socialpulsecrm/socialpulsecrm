@@ -13,8 +13,9 @@ It's a fast, dependency-free **static site** (HTML + modular CSS + a little vani
 ├── index.html            # Landing page (single file for SEO)
 ├── 404.html              # Branded not-found page
 ├── contact/index.html    # Contact & help page (mailto form)
-├── privacy/index.html    # Privacy Policy
-├── terms/index.html      # Terms of Service
+├── privacy/index.html    # Privacy Policy (updated July 2026)
+│   └── deletion/index.html # Facebook Data Deletion Instructions (Meta compliance)
+├── terms/index.html      # Terms of Service (updated July 2026)
 ├── css/                  # Modular stylesheets, linked in order
 │   ├── tokens.css        #   design tokens + dark mode
 │   ├── base.css          #   reset, typography, layout helpers

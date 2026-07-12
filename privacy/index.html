@@ -8,7 +8,11 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#6366f1" />
   <link rel="canonical" href="https://socialpulsecrm.com/privacy/" />
+  <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="icon" href="/assets/favicon-512.png" sizes="512x512" type="image/png" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/assets/favicon-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -42,7 +46,7 @@
   <section class="legal-hero">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p>Last updated: June 4, 2026</p>
+      <p>Last updated: July 12, 2026</p>
     </div>
   </section>
 
@@ -52,7 +56,11 @@
       <a href="#use">How we use it</a>
       <a href="#sharing">Data sharing</a>
       <a href="#security">Security</a>
+      <a href="#retention">Retention</a>
       <a href="#rights">Your rights</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#children">Children &amp; links</a>
+      <a href="#changes">Changes</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -60,56 +68,69 @@
     <p>We collect the following types of information:</p>
     <ul>
       <li><strong>Account information:</strong> name, email address, username and password when you register.</li>
-      <li><strong>Connected platform data:</strong> profile information, posts, analytics and engagement metrics from social media accounts you choose to connect.</li>
-      <li><strong>Usage data:</strong> how you interact with the Service (pages visited, features used).</li>
-      <li><strong>Device information:</strong> browser type, operating system and IP address.</li>
+      <li><strong>Connected platform data:</strong> OAuth access tokens, profile information, posts, analytics and engagement metrics from social media accounts you choose to connect (including Facebook Pages, Instagram, YouTube, TikTok, X/Twitter, LinkedIn, Threads, Bluesky, Pinterest, Reddit and Mastodon).</li>
+      <li><strong>Content you create:</strong> scheduled posts, captions, media, campaign briefs and any other content you draft or publish using the Service.</li>
+      <li><strong>Usage data:</strong> how you interact with the Service — pages visited, features used, clicks, and session duration — collected via server logs and first-party analytics.</li>
+      <li><strong>Device information:</strong> browser type, operating system, IP address and general geographic region.</li>
+      <li><strong>Billing information:</strong> payment method details processed securely by our third-party payment processor (Stripe). We do not store full card numbers on our servers.</li>
     </ul>
 
     <h2 id="use">2. How We Use Your Information</h2>
     <ul>
       <li>To provide, maintain and improve the Service</li>
+      <li>To authenticate you and keep your account secure</li>
       <li>To publish content to your connected social media accounts when you initiate it</li>
       <li>To display analytics and performance data from your own accounts</li>
-      <li>To send service-related notifications</li>
-      <li>To ensure security and prevent abuse</li>
+      <li>To power AI-assisted features such as caption drafting, reply suggestions and trend insights</li>
+      <li>To process subscription payments and manage your billing</li>
+      <li>To send service-related notifications, product updates and support responses</li>
+      <li>To ensure security, detect fraud and prevent abuse</li>
+      <li>To comply with our legal obligations</li>
     </ul>
     <p>We do not sell, rent or share your data with third parties for advertising.</p>
 
     <h2 id="sharing">3. Data Sharing</h2>
     <p>We do not sell your personal information. We may share data with:</p>
     <ul>
-      <li><strong>Third-party platforms:</strong> only as necessary to perform actions you initiate (for example, publishing a post to X, Instagram or LinkedIn).</li>
-      <li><strong>Service providers:</strong> hosting, analytics and infrastructure providers who process data on our behalf.</li>
-      <li><strong>Legal requirements:</strong> when required by law or to protect our rights.</li>
+      <li><strong>Third-party platforms:</strong> only as necessary to perform actions you initiate (for example, publishing a post to Facebook, Instagram or LinkedIn via their official APIs).</li>
+      <li><strong>Meta (Facebook):</strong> when you connect a Facebook Page or Instagram account, data is exchanged with Meta's Graph API under Meta's Platform Terms. If you remove Social Pulse from your Facebook Apps &amp; Websites settings, Meta notifies us and we delete your associated data. See our <a href="/privacy/deletion/">Facebook Data Deletion Instructions</a>.</li>
+      <li><strong>Payment processor:</strong> Stripe processes billing information on our behalf and is PCI-DSS compliant.</li>
+      <li><strong>Infrastructure &amp; analytics providers:</strong> hosting, database and first-party analytics providers who process data solely on our behalf under data processing agreements.</li>
+      <li><strong>Legal requirements:</strong> when required by applicable law, court order, or to protect the rights and safety of Social Pulse or our users.</li>
+      <li><strong>Business transfers:</strong> in the event of a merger, acquisition or sale of all or a portion of our assets, user data may be transferred as part of that transaction.</li>
     </ul>
 
     <h2 id="security">4. Data Storage &amp; Security</h2>
-    <p>We store data on secure servers with encryption in transit and at rest. OAuth tokens for connected accounts are encrypted using AES-256-GCM before storage, and data is held in secured PostgreSQL databases. We follow industry-standard security practices, including two-factor authentication and audit logging.</p>
+    <p>We store data on secure servers with encryption in transit (TLS 1.2+) and at rest (AES-256). OAuth tokens for connected accounts are encrypted using AES-256-GCM before storage, and data is held in secured PostgreSQL databases with regular automated backups. We follow industry-standard security practices including two-factor authentication for internal systems, role-based access controls, and audit logging. We conduct periodic security reviews and promptly address reported vulnerabilities.</p>
 
     <h2 id="retention">5. Data Retention</h2>
-    <p>We retain your data for as long as your account is active. Upon account deletion, we remove your personal data within 30 days, except where retention is required by law.</p>
+    <p>We retain your data for as long as your account is active or as needed to provide the Service. Upon account deletion, we remove your personal data within <strong>30 days</strong>, except where retention is required by law (for example, billing records which may be kept for up to 7 years for tax purposes). Disconnecting a social media account revokes our access token; any cached data from that platform is deleted within 30 days.</p>
 
     <h2 id="rights">6. Your Rights</h2>
-    <p>You have the right to:</p>
+    <p>Depending on your jurisdiction (including under GDPR, CCPA and similar regulations), you have the right to:</p>
     <ul>
-      <li>Access your personal data</li>
-      <li>Correct inaccurate data</li>
-      <li>Delete your account and associated data</li>
-      <li>Disconnect any linked social media account at any time</li>
-      <li>Export your data</li>
+      <li><strong>Access</strong> your personal data we hold</li>
+      <li><strong>Correct</strong> inaccurate or incomplete data</li>
+      <li><strong>Delete</strong> your account and all associated data</li>
+      <li><strong>Port</strong> your data in a machine-readable format</li>
+      <li><strong>Object</strong> to or restrict certain processing activities</li>
+      <li><strong>Withdraw consent</strong> at any time where processing is based on consent</li>
+      <li><strong>Disconnect</strong> any linked social media account at any time</li>
+      <li><strong>Facebook data deletion:</strong> request removal of Facebook-sourced data by following our <a href="/privacy/deletion/">Facebook Data Deletion Instructions</a></li>
     </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:privacy@socialpulsecrm.com">privacy@socialpulsecrm.com</a>. We will respond within 30 days (or within the period required by applicable law).</p>
 
     <h2 id="cookies">7. Cookies</h2>
-    <p>We use essential cookies for authentication and session management. We do not use third-party tracking cookies for advertising purposes.</p>
+    <p>We use <strong>essential cookies</strong> for authentication and session management (for example, to keep you logged in). We may use <strong>first-party analytics cookies</strong> to understand aggregate usage patterns and improve the Service. We do not use third-party advertising or tracking cookies. You can configure cookie preferences in your browser settings; disabling essential cookies may affect your ability to use the Service.</p>
 
     <h2 id="children">8. Third-Party Links &amp; Children's Privacy</h2>
-    <p>The Service may contain links to third-party websites; we are not responsible for their privacy practices. The Service is not intended for users under 16 years of age, and we do not knowingly collect data from children.</p>
+    <p>The Service may contain links to third-party websites; we are not responsible for their privacy practices. The Service is not directed at children under the age of 16, and we do not knowingly collect personal data from children. If you believe we have inadvertently collected such data, please contact us immediately so we can delete it.</p>
 
     <h2 id="changes">9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy periodically. We will notify you of significant changes via email or in-app notification.</p>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page and notify you via email or in-app notification at least 14 days before the changes take effect. Continued use of the Service after the effective date constitutes your acceptance of the updated policy.</p>
 
     <h2 id="contact">10. Contact</h2>
-    <p>For privacy-related inquiries, contact us at <a href="mailto:privacy@socialpulsecrm.com">privacy@socialpulsecrm.com</a>.</p>
+    <p>For privacy-related inquiries, data requests or concerns, contact our privacy team at <a href="mailto:privacy@socialpulsecrm.com">privacy@socialpulsecrm.com</a>. You may also write to us at the address provided on our <a href="/contact/">Contact page</a>. If you are in the European Economic Area and have an unresolved concern, you have the right to lodge a complaint with your local data protection authority.</p>
 
     <a class="legal__back" href="/">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
