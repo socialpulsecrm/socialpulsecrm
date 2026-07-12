@@ -87,8 +87,10 @@
         "description": "Schedule and publish to 12 platforms, reply from one unified inbox, run creator campaigns, and grow with 16 AI agents.",
         "offers": [
           { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Pro", "price": "19", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Enterprise", "price": "49", "priceCurrency": "USD" }
+          { "@type": "Offer", "name": "Pro", "price": "29", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Creator Enterprise", "price": "49", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Brand", "price": "89", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Agency", "price": "89", "priceCurrency": "USD" }
         ],
         "featureList": "Multi-platform scheduling, AI content generation, unified inbox, analytics and reports, creator campaigns and marketplace, team collaboration and approvals, link-in-bio"
       },
@@ -628,21 +630,21 @@
 
         <div class="pricing-controls reveal">
           <div class="ptoggle" role="tablist" aria-label="Billing cycle">
-            <button id="billMonthly" class="active" role="tab" aria-selected="true">Monthly</button>
-            <button id="billYearly" role="tab" aria-selected="false">Yearly</button>
+            <button type="button" id="billMonthly" class="active" role="tab" aria-selected="true">Monthly</button>
+            <button type="button" id="billYearly" role="tab" aria-selected="false">Yearly</button>
           </div>
           
           <div class="ptoggle" role="tablist" aria-label="Currency selection">
-            <button id="currUsd" class="active" role="tab" aria-selected="true">$ USD</button>
-            <button id="currInr" role="tab" aria-selected="false">₹ INR</button>
+            <button type="button" id="currUsd" class="active" role="tab" aria-selected="true">$ USD</button>
+            <button type="button" id="currInr" role="tab" aria-selected="false">₹ INR</button>
           </div>
         </div>
 
         <div class="pricing-controls reveal" style="margin-bottom: 40px;">
           <div class="ptoggle" role="tablist" aria-label="Product plan type">
-            <button id="prodCreator" class="active" role="tab" aria-selected="true">Creator</button>
-            <button id="prodBrand" role="tab" aria-selected="false">Brand</button>
-            <button id="prodAgency" role="tab" aria-selected="false">Agency</button>
+            <button type="button" id="prodCreator" class="active" role="tab" aria-selected="true">Creator</button>
+            <button type="button" id="prodBrand" role="tab" aria-selected="false">Brand</button>
+            <button type="button" id="prodAgency" role="tab" aria-selected="false">Agency</button>
           </div>
         </div>
 
