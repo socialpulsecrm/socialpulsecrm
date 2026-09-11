@@ -2,12 +2,12 @@
 export function initAiShowcase() {
   const tabs = document.querySelectorAll('.ai-tab');
   const cards = document.querySelectorAll('.acard');
-  const countEl = document.getElementById('aiFilteredCount');
+  const countEl = document.getElementById('aiVisibleCount');
 
   if (!tabs.length || !cards.length) return;
 
   function setSuite(suite) {
-    // 1. Update tab active states
+    // 1. Update tab active states without touching static tab badges
     tabs.forEach((tab) => {
       const isMatch = tab.getAttribute('data-suite') === suite;
       tab.classList.toggle('active', isMatch);
@@ -20,9 +20,8 @@ export function initAiShowcase() {
       const cardSuite = card.getAttribute('data-suite');
       if (suite === 'all' || cardSuite === suite) {
         card.style.display = 'flex';
-        // Trigger subtle animation
         card.classList.remove('acard--fade-in');
-        void card.offsetWidth; // force reflow
+        void card.offsetWidth; // force reflow for smooth animation
         card.classList.add('acard--fade-in');
         visibleCount++;
       } else {
@@ -30,6 +29,7 @@ export function initAiShowcase() {
       }
     });
 
+    // 3. Update dedicated subtitle counter
     if (countEl) {
       countEl.textContent = String(visibleCount);
     }

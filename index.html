@@ -78,36 +78,11 @@
         "description": "All-in-one AI social media management platform. Schedule and publish to 13 platforms, reply from one unified inbox, run creator campaigns with FTC compliance, and scale with 36 specialized AI agents.",
         "url": "https://socialpulsecrm.com/",
         "offers": [
-          {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "name": "Free"
-          },
-          {
-            "@type": "Offer",
-            "price": "29",
-            "priceCurrency": "USD",
-            "name": "Pro"
-          },
-          {
-            "@type": "Offer",
-            "price": "49",
-            "priceCurrency": "USD",
-            "name": "Creator Enterprise"
-          },
-          {
-            "@type": "Offer",
-            "price": "89",
-            "priceCurrency": "USD",
-            "name": "Brand"
-          },
-          {
-            "@type": "Offer",
-            "price": "89",
-            "priceCurrency": "USD",
-            "name": "Agency"
-          }
+          { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+          { "@type": "Offer", "price": "29", "priceCurrency": "USD", "name": "Pro" },
+          { "@type": "Offer", "price": "49", "priceCurrency": "USD", "name": "Creator Enterprise" },
+          { "@type": "Offer", "price": "89", "priceCurrency": "USD", "name": "Brand" },
+          { "@type": "Offer", "price": "89", "priceCurrency": "USD", "name": "Agency" }
         ]
       },
       {
@@ -148,7 +123,7 @@
 
       <nav class="nav__links" aria-label="Primary">
         <a href="#features">Features</a>
-        <a href="#ai">36 AI Agents</a>
+        <a href="#ai">AI Agents</a>
         <a href="#audience">Who It's For</a>
         <a href="#pricing">Pricing</a>
         <a href="/contact/">Contact</a>
@@ -166,7 +141,7 @@
 
     <div class="nav__mobile" id="navMobile">
       <a href="#features">Features</a>
-      <a href="#ai">36 AI Agents</a>
+      <a href="#ai">AI Agents</a>
       <a href="#audience">Who It's For</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
@@ -203,6 +178,24 @@
 
         <!-- product mock -->
         <div class="hero__media reveal" aria-hidden="true">
+          <div class="chip chip--ai">
+            <span class="chip__icon">
+              <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="m12 3 1.8 4.7L18.5 9l-4.7 1.3L12 15l-1.8-4.7L5.5 9l4.7-1.3L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <b>36 AI Agents</b>
+              <small>Autonomous Copilot</small>
+            </div>
+          </div>
+          <div class="chip chip--stat">
+            <span class="chip__icon">
+              <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <b>13 Platforms</b>
+              <small>One calm workspace</small>
+            </div>
+          </div>
           <div class="mock">
             <div class="mock__bar"><i></i><i></i><i></i></div>
             <div class="mock__post">
@@ -224,6 +217,28 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS BAND ================= -->
+    <section class="stats-band">
+      <div class="container stats-band__grid">
+        <div class="stat-item reveal">
+          <b>13</b>
+          <span>Integrated Platforms</span>
+        </div>
+        <div class="stat-item reveal">
+          <b>36</b>
+          <span>Specialized AI Agents</span>
+        </div>
+        <div class="stat-item reveal">
+          <b>100%</b>
+          <span>Maker-Checker Audit Trail</span>
+        </div>
+        <div class="stat-item reveal">
+          <b>Zero</b>
+          <span>Training on Private Data</span>
         </div>
       </div>
     </section>
@@ -378,15 +393,15 @@
                 <div class="inbox__item">
                   <div class="inbox__av"></div>
                   <div>
-                    <div class="inbox__name">@maya.creates <span class="acard__badge acard__badge--free">Collab Intent</span></div>
+                    <div class="inbox__name">@maya.creates · Collab Intent</div>
                     <div class="inbox__msg">Loved your latest reel! Can we partner on our summer drop?</div>
-                    <span class="inbox__ai"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.5 4L17 8l-3.5 1L12 13l-1.5-4L7 8l3.5-1L12 3Z" stroke="currentColor" stroke-width="1.6"/></svg> Collab pitch draft ready</span>
+                    <span class="inbox__ai"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.5 4L17 8l-3.5 1L12 13l-1.5-4L7 8l3.5-1L12 3Z" stroke="currentColor" stroke-width="1.6"/></svg> Suggested reply ready</span>
                   </div>
                 </div>
                 <div class="inbox__item">
                   <div class="inbox__av"></div>
                   <div>
-                    <div class="inbox__name">@jon.founder <span class="acard__badge acard__badge--pro">Pricing Intent</span></div>
+                    <div class="inbox__name">@jon.founder · Pricing Inquiry</div>
                     <div class="inbox__msg">What are the agency enterprise seat limits?</div>
                   </div>
                 </div>
@@ -438,18 +453,36 @@
           <div class="frow__media">
             <div class="fcard">
               <div class="fcard__head">
-                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8"/></svg> Approval Pipeline</span>
+                <span class="fcard__title">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  Maker-Checker Pipeline
+                </span>
                 <span class="fcard__pill">Stage 2 of 2</span>
               </div>
-              <div class="inbox" style="padding: 16px;">
-                <div style="font-size: 0.88rem; font-weight: 600; margin-bottom: 8px;">Q3 Launch Post — @brand_global</div>
-                <div style="display: flex; gap: 8px; font-size: 0.78rem; margin-bottom: 12px;">
-                  <span class="acard__badge acard__badge--free">✓ Maker: Creator Team</span>
-                  <span class="acard__badge acard__badge--pro">Pending: Brand Manager</span>
+              <div class="appr">
+                <div class="appr__row">
+                  <div class="appr__av"></div>
+                  <div>
+                    <div class="appr__name">1. Drafted by Creator</div>
+                    <div class="appr__role">@maya.creates · Contributor</div>
+                  </div>
+                  <span class="appr__tag done">✓ Maker Done</span>
                 </div>
-                <div style="display: flex; gap: 10px;">
-                  <button class="btn btn-primary btn-sm" style="font-size: 0.8rem; padding: 6px 14px;">Approve &amp; Schedule</button>
-                  <button class="btn btn-ghost btn-sm" style="font-size: 0.8rem; padding: 6px 14px;">Request Changes</button>
+                <div class="appr__row">
+                  <div class="appr__av" style="background: linear-gradient(135deg, #60a5fa, #6366f1);"></div>
+                  <div>
+                    <div class="appr__name">2. Brand Manager Sign-off</div>
+                    <div class="appr__role">@sarah.lead · Checker Review</div>
+                  </div>
+                  <span class="appr__tag wait">Pending Checker</span>
+                </div>
+                <div class="appr__row">
+                  <div class="appr__av" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);"></div>
+                  <div>
+                    <div class="appr__name">3. Post Deletion Guard</div>
+                    <div class="appr__role">2-person confirmation required</div>
+                  </div>
+                  <span class="appr__tag">🔒 Guard Active</span>
                 </div>
               </div>
             </div>
@@ -471,15 +504,36 @@
           <div class="frow__media">
             <div class="fcard">
               <div class="fcard__head">
-                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"/></svg> Campaign Deal Desk</span>
+                <span class="fcard__title">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"/></svg>
+                  Campaign Deal Desk
+                </span>
                 <span class="fcard__pill">AI Advisory</span>
               </div>
-              <div class="inbox" style="padding: 16px;">
-                <div style="font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">Creator Rate Benchmark</div>
-                <div style="font-size: 0.82rem; color: var(--muted); margin-bottom: 10px;">Market average for 85K niche followers: $1,200 – $1,500 per deliverable.</div>
-                <div style="background: var(--bg-2); padding: 10px; border-radius: var(--r-md); border: 1px solid var(--border); font-size: 0.8rem;">
-                  <span style="color: #10b981; font-weight: 700;">✓ FTC #ad disclosure detected</span><br />
-                  <span style="color: #6366f1; font-weight: 600;">ℹ 60-day whitelisting license fee: +$450</span>
+              <div class="camp">
+                <div class="camp__row">
+                  <div class="camp__av"></div>
+                  <div>
+                    <div class="camp__name">@techguru · Tech &amp; AI</div>
+                    <div class="camp__meta">142K reach · Rate Advisor: $1.4K deal rate</div>
+                  </div>
+                  <div class="camp__score">96% fit</div>
+                </div>
+                <div class="camp__row">
+                  <div class="camp__av" style="background: linear-gradient(135deg, #60a5fa, #6366f1);"></div>
+                  <div>
+                    <div class="camp__name">@designwithmaya · Design</div>
+                    <div class="camp__meta">88K reach · FTC #ad disclosure verified</div>
+                  </div>
+                  <div class="camp__score">92% fit</div>
+                </div>
+                <div class="camp__row">
+                  <div class="camp__av" style="background: linear-gradient(135deg, #f472b6, #a855f7);"></div>
+                  <div>
+                    <div class="camp__name">@sarahcreates · Lifestyle</div>
+                    <div class="camp__meta">64K reach · 30-day whitelisting: +$450</div>
+                  </div>
+                  <div class="camp__score">89% fit</div>
                 </div>
               </div>
             </div>
@@ -501,15 +555,24 @@
           <div class="frow__media">
             <div class="fcard">
               <div class="fcard__head">
-                <span class="fcard__title"><svg viewBox="0 0 24 24" fill="none"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="currentColor" stroke-width="1.8"/></svg> Bio Storefront</span>
-                <span class="fcard__pill">High Converting</span>
+                <span class="fcard__title">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="currentColor" stroke-width="1.8"/></svg>
+                  Bio Storefront
+                </span>
+                <span class="fcard__pill">+18% CTR</span>
               </div>
-              <div class="inbox" style="padding: 16px; text-align: center;">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--gradient); margin: 0 auto 8px;"></div>
-                <div style="font-weight: 700; font-size: 0.95rem;">@yourbrand</div>
-                <div style="font-size: 0.8rem; color: var(--muted); margin-bottom: 12px;">Creator &amp; Founder</div>
-                <div style="background: var(--surface); border: 1px solid var(--border); padding: 8px; border-radius: var(--r-md); margin-bottom: 6px; font-size: 0.82rem; font-weight: 600;">🔥 Summer Collection Drop</div>
-                <div style="background: var(--surface); border: 1px solid var(--border); padding: 8px; border-radius: var(--r-md); font-size: 0.82rem; font-weight: 600;">🎙️ New Podcast Episode</div>
+              <div class="bio">
+                <div class="bio__top">
+                  <i></i>
+                  <b>@yourbrand</b>
+                  <small style="display:block; color:var(--muted); font-size:0.78rem; margin-top:2px;">Creator &amp; Founder</small>
+                </div>
+                <div class="bio__link brand">🔥 Summer Drop 2026</div>
+                <div class="bio__link">🎙️ New Podcast Episode</div>
+                <div class="bio__link">💼 Work with me (Direct CRM)</div>
+                <div style="text-align:center; font-size:0.74rem; color:var(--brand-600); font-weight:600; margin-top:4px;">
+                  ⚡ Continuous AI Optimization
+                </div>
               </div>
             </div>
           </div>
@@ -520,18 +583,22 @@
     <!-- ================= 36 AI AGENTS SHOWCASE ================= -->
     <section class="ai section-pad" id="ai">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head reveal" style="max-width: 760px; margin-inline: auto;">
           <span class="eyebrow">AI-Native Architecture</span>
-          <h2>Meet your <span class="gradient-text">36 specialized AI agents</span></h2>
+          <h2 style="text-wrap: balance;">Meet your <span class="gradient-text">36 specialized AI agents</span></h2>
           <p>Not a generic chatbot bolted on the side — an orchestrated team of 36 specialized agents across 4 suites, grounded in your brand voice and actual performance data.</p>
         </div>
 
         <div class="ai-controls reveal" role="tablist" aria-label="AI Agent Suites">
-          <button type="button" class="ai-tab active" data-suite="all" role="tab" aria-selected="true">All Agents <span class="ai-tab__count" id="aiFilteredCount">36</span></button>
+          <button type="button" class="ai-tab active" data-suite="all" role="tab" aria-selected="true">All Agents <span class="ai-tab__count">36</span></button>
           <button type="button" class="ai-tab" data-suite="content" role="tab" aria-selected="false">Content &amp; Studio <span class="ai-tab__count">8</span></button>
           <button type="button" class="ai-tab" data-suite="intelligence" role="tab" aria-selected="false">Insights &amp; Intelligence <span class="ai-tab__count">7</span></button>
           <button type="button" class="ai-tab" data-suite="engagement" role="tab" aria-selected="false">Engagement &amp; Inbox <span class="ai-tab__count">6</span></button>
           <button type="button" class="ai-tab" data-suite="campaigns" role="tab" aria-selected="false">Campaigns &amp; Matching <span class="ai-tab__count">15</span></button>
+        </div>
+
+        <div class="ai-status-bar reveal">
+          <span>Displaying <b id="aiVisibleCount">36</b> specialized AI agents across all categories</span>
         </div>
 
         <div class="ai__grid" id="aiGrid">
@@ -544,8 +611,8 @@
               </div>
               <p>Drafts high-converting captions, viral hooks, hashtag clusters, and fresh post concepts in your tone.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -558,8 +625,8 @@
               </div>
               <p>Analyzes past follower activity to recommend the exact peak hour and time slot for maximum reach.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -572,8 +639,8 @@
               </div>
               <p>Composes, formats, and adapts multi-slide carousels, video reels, and visual layouts for each network.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -586,8 +653,8 @@
               </div>
               <p>Generates on-brand, high-resolution visuals and promotional creatives for posts, campaigns, and bio blocks.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -600,8 +667,8 @@
               </div>
               <p>Audits your storefront bio page and proposes reviewable enhancements to copy, links, and layout blocks.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -614,8 +681,8 @@
               </div>
               <p>Uses vector RAG to retrieve your historical top posts and brand kit guidelines so copy never feels generic.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -628,8 +695,8 @@
               </div>
               <p>Transforms your core themes and target audience into a personalized starter roadmap and weekly content calendar.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -642,8 +709,8 @@
               </div>
               <p>Generates tiered, high-signal hashtag sets matched to platform volume, difficulty, and trending discovery velocity.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CONTENT</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CONTENT</span>
               </div>
             </div>
           </article>
@@ -656,8 +723,8 @@
               </div>
               <p>Translates complex cross-channel metrics into plain-English summaries that explain why numbers moved and what to do next.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">INTELLIGENCE</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">INTELLIGENCE</span>
               </div>
             </div>
           </article>
@@ -670,8 +737,8 @@
               </div>
               <p>Surfaces emerging viral formats, soundbites, and niche topic spikes across 13 networks before market saturation.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">INTELLIGENCE</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">INTELLIGENCE</span>
               </div>
             </div>
           </article>
@@ -684,8 +751,8 @@
               </div>
               <p>Delivers daily tactical growth suggestions, hook experiments, and follower retention predictions.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">INTELLIGENCE</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">INTELLIGENCE</span>
               </div>
             </div>
           </article>
@@ -698,8 +765,8 @@
               </div>
               <p>Scans mentions, hashtags, and keywords across the social web to measure sentiment, intent, and PR risks.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">INTELLIGENCE</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">INTELLIGENCE</span>
               </div>
             </div>
           </article>
@@ -712,8 +779,8 @@
               </div>
               <p>Deep-dives into competitor posting frequency, top-performing formats, engagement velocity, and audience overlap.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Premium Model</span>
-                <span class="acard__badge">INTELLIGENCE</span>
+                <span class="acard__tag">👑 Premium</span>
+                <span class="acard__tag acard__tag--suite">INTELLIGENCE</span>
               </div>
             </div>
           </article>
@@ -726,8 +793,8 @@
               </div>
               <p>Decomposes broad quarterly goals into parallel research vectors and synthesizes one actionable strategy document.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">INTELLIGENCE</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">INTELLIGENCE</span>
               </div>
             </div>
           </article>
@@ -740,8 +807,8 @@
               </div>
               <p>Evaluates single published posts, scoring readability, hook potency, visual appeal, and comment velocity.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">INTELLIGENCE</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">INTELLIGENCE</span>
               </div>
             </div>
           </article>
@@ -754,8 +821,8 @@
               </div>
               <p>Drafts contextual, tone-accurate replies to comments and DMs across all 13 channels in seconds.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">ENGAGEMENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">ENGAGEMENT</span>
               </div>
             </div>
           </article>
@@ -768,8 +835,8 @@
               </div>
               <p>Crafts persuasive, brand-safe outreach pitches to creators, partners, and VIP community members.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">ENGAGEMENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">ENGAGEMENT</span>
               </div>
             </div>
           </article>
@@ -782,8 +849,8 @@
               </div>
               <p>Detects repetitive message patterns in your inbox and proposes smart automated routing and auto-response rules.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">ENGAGEMENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">ENGAGEMENT</span>
               </div>
             </div>
           </article>
@@ -796,8 +863,8 @@
               </div>
               <p>Classifies inbound DMs and comments by genuine intent (Pricing, Collab, Support, Spam) so rules act on meaning.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">ENGAGEMENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">ENGAGEMENT</span>
               </div>
             </div>
           </article>
@@ -810,8 +877,8 @@
               </div>
               <p>Answers common inquiries instantly using verified facts from your knowledge base, matched to brand tone.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">ENGAGEMENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">ENGAGEMENT</span>
               </div>
             </div>
           </article>
@@ -824,8 +891,8 @@
               </div>
               <p>Evaluates emotional temperature to elevate urgent issues and identify VIP fans for priority escalation.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">ENGAGEMENT</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">ENGAGEMENT</span>
               </div>
             </div>
           </article>
@@ -838,8 +905,8 @@
               </div>
               <p>Builds comprehensive campaign briefs, deliverable roadmaps, and target milestones tailored to campaign goals.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -852,8 +919,8 @@
               </div>
               <p>Drafts multi-stage outreach email and WhatsApp drip sequences that get high response rates from target creators.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -866,8 +933,8 @@
               </div>
               <p>Classifies creator replies (interested, rate objection, decline, out of office) and prepares recommended responses.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -880,8 +947,8 @@
               </div>
               <p>Flags FTC sponsor disclosures, brand-safety risks, competitor mentions, and brief guideline adherence before publishing.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -894,8 +961,8 @@
               </div>
               <p>Audits deliverable rights duration, exclusivity terms, and estimates fair paid-media whitelisting license fees.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -908,8 +975,8 @@
               </div>
               <p>Recommends fair organic deal rates grounded in market benchmarks for follower tiers and verified engagement history.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -922,8 +989,8 @@
               </div>
               <p>Estimates pre-launch reach, expected impressions, and engagement bands with confidence intervals prior to budget spend.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -936,8 +1003,8 @@
               </div>
               <p>Turns campaign metrics, deliverables, and creator scorecards into a polished executive summary for executive stakeholders.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -950,8 +1017,8 @@
               </div>
               <p>Transforms natural language queries like "tech creators in Austin under 100k" into targeted filters and fit rankings.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -964,8 +1031,8 @@
               </div>
               <p>Conducts continuous audits of briefs, deliverables, payouts, and contracts to generate prioritized next steps.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -978,8 +1045,8 @@
               </div>
               <p>Evaluates creator aesthetics, engagement authenticity, and historical ROI to rank best partners for open campaigns.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -992,8 +1059,8 @@
               </div>
               <p>Validates approved deliverables, formats first comments and disclosures, and queues posts to the campaign timeline.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -1006,8 +1073,8 @@
               </div>
               <p>Analyzes creator contracts and collaboration agreements to flag missing clauses, ambiguous terms, or liability risks.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Workhorse Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚙️ Workhorse</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -1020,8 +1087,8 @@
               </div>
               <p>Recommends paid amplification budgets, ad flight distributions, and calculates blended organic and paid ROAS.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -1034,8 +1101,8 @@
               </div>
               <p>Continuously monitors running creator ad flights, advising when to scale winners, hold spend, fix fatigue, or cut losses.</p>
               <div class="acard__tags">
-                <span class="acard__badge">Quality Model</span>
-                <span class="acard__badge">CAMPAIGNS</span>
+                <span class="acard__tag">⚡ Quality</span>
+                <span class="acard__tag acard__tag--suite">CAMPAIGNS</span>
               </div>
             </div>
           </article>
@@ -1049,6 +1116,12 @@
           <div class="copilot-callout__text">
             <h3>Pulse Copilot — Autonomous Reasoning Loop</h3>
             <p>Beyond individual agents, Pulse Copilot functions as an autonomous loop engine. It dynamically decomposes complex goals into sub-tasks, delegates to specialized agents, executes multi-step research and publishing routines, and synthesizes answers grounded in your real metrics.</p>
+            <div class="copilot-steps">
+              <span class="copilot-step">1. Goal Intake</span>
+              <span class="copilot-step">→ 2. Dynamic Agent Chaining</span>
+              <span class="copilot-step">→ 3. Vector RAG Grounding</span>
+              <span class="copilot-step">→ 4. One-Click Verification &amp; Publish</span>
+            </div>
           </div>
         </div>
 
@@ -1109,6 +1182,14 @@
         </div>
 
         <div class="pricing-controls reveal">
+          <div class="ptoggle ptoggle--product" role="tablist" aria-label="Product plan type">
+            <button type="button" id="prodCreator" class="active" role="tab" aria-selected="true">Creator Plans</button>
+            <button type="button" id="prodBrand" role="tab" aria-selected="false">Brand Enterprise</button>
+            <button type="button" id="prodAgency" role="tab" aria-selected="false">Agency Enterprise</button>
+          </div>
+        </div>
+
+        <div class="pricing-controls reveal" style="margin-bottom: 34px;">
           <div class="ptoggle" role="tablist" aria-label="Billing cycle">
             <button type="button" id="billMonthly" class="active" role="tab" aria-selected="true">Monthly</button>
             <button type="button" id="billYearly" role="tab" aria-selected="false">Yearly (Save ~17%)</button>
@@ -1120,19 +1201,13 @@
           </div>
         </div>
 
-        <div class="pricing-controls reveal" style="margin-bottom: 40px;">
-          <div class="ptoggle" role="tablist" aria-label="Product plan type">
-            <button type="button" id="prodCreator" class="active" role="tab" aria-selected="true">Creator</button>
-            <button type="button" id="prodBrand" role="tab" aria-selected="false">Brand</button>
-            <button type="button" id="prodAgency" role="tab" aria-selected="false">Agency</button>
-          </div>
-        </div>
-
         <div class="pgrid pgrid--triple" id="pricingGrid">
           <!-- FREE (Creator) -->
           <article class="plan plan-card" data-product="creator" id="planFree">
-            <span class="plan__tag">Weekly Refill</span>
-            <div class="plan__name">Free</div>
+            <div class="plan__name-row">
+              <span class="plan__name">Free</span>
+              <span class="plan__badge">Weekly Refill</span>
+            </div>
             <p class="plan__desc">Everything you need to start creating, scheduling, and growing.</p>
             <div class="plan__price">
               <b class="price-val" 
@@ -1155,8 +1230,10 @@
           <!-- PRO (Creator) -->
           <article class="plan plan--featured plan-card" data-product="creator" id="planPro">
             <span class="plan__flag">Most Popular</span>
-            <span class="plan__tag">Campaign Burst Ready</span>
-            <div class="plan__name">Pro</div>
+            <div class="plan__name-row">
+              <span class="plan__name">Pro</span>
+              <span class="plan__badge">Burst Ready</span>
+            </div>
             <p class="plan__desc">For serious creators scaling multi-platform reach and revenue.</p>
             <div class="plan__price">
               <b class="price-val" 
@@ -1179,8 +1256,10 @@
 
           <!-- ENTERPRISE (Creator) -->
           <article class="plan plan-card" data-product="creator" id="planCreatorEnterprise">
-            <span class="plan__tag">Reasoning Models</span>
-            <div class="plan__name">Creator Enterprise</div>
+            <div class="plan__name-row">
+              <span class="plan__name">Creator Enterprise</span>
+              <span class="plan__badge">Reasoning AI</span>
+            </div>
             <p class="plan__desc">Maximum AI power, reasoning models, and unlimited channels.</p>
             <div class="plan__price">
               <b class="price-val" 
@@ -1204,8 +1283,10 @@
           <!-- BRAND (Brand) -->
           <article class="plan plan--featured plan-card" data-product="brand" id="planBrand" style="display: none;">
             <span class="plan__flag">Enterprise Brand</span>
-            <span class="plan__tag">Maker-Checker Included</span>
-            <div class="plan__name">Brand</div>
+            <div class="plan__name-row">
+              <span class="plan__name">Brand</span>
+              <span class="plan__badge">Maker-Checker Included</span>
+            </div>
             <p class="plan__desc">A complete brand workspace with creator &amp; campaign teams and Maker-Checker approval pipelines.</p>
             <div class="plan__price">
               <b class="price-val" 
@@ -1229,8 +1310,10 @@
           <!-- AGENCY (Agency) -->
           <article class="plan plan--featured plan-card" data-product="agency" id="planAgency" style="display: none;">
             <span class="plan__flag">Enterprise Agency</span>
-            <span class="plan__tag">Unlimited Workspaces</span>
-            <div class="plan__name">Agency</div>
+            <div class="plan__name-row">
+              <span class="plan__name">Agency</span>
+              <span class="plan__badge">Unlimited Workspaces</span>
+            </div>
             <p class="plan__desc">Run unlimited client workspaces from one central cockpit with client isolation and shared AI pools.</p>
             <div class="plan__price">
               <b class="price-val" 
@@ -1345,8 +1428,17 @@
           </a>
           <p>The AI social media platform for creators, brands and agencies.</p>
           <div class="footer__social">
-            <a href="https://app.socialpulsecrm.com/register" aria-label="Get started">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="https://x.com/socialpulsecrm" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com/company/socialpulsecrm" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3v9Zm-1.5-10.3a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5ZM19 19h-3v-4.7c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.5V19h-3v-9h3v1.2c.4-.7 1.4-1.5 2.9-1.5 3.1 0 3.7 2 3.7 4.7V19Z"/></svg>
+            </a>
+            <a href="https://youtube.com/@socialpulsecrm" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://github.com/socialpulsecrm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             </a>
           </div>
         </div>
