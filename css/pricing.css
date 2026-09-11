@@ -176,3 +176,24 @@
     transform: scale(1.03);
   }
 }
+
+
+/* Plan badges & burst allowance indicators */
+.plan__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 3px 8px;
+  border-radius: var(--r-full);
+  margin-bottom: 12px;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--brand-500);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.plan__feats li b {
+  color: var(--text);
+}

@@ -4,11 +4,13 @@ import { initNav } from './nav.js';
 import { initPricing } from './pricing.js';
 import { initFaq } from './faq.js';
 import { initReveal } from './reveal.js';
+import { initAiShowcase } from './ai-showcase.js';
 
 initNav();
 initPricing();
 initFaq();
 initReveal();
+initAiShowcase();
 
 // Keep the footer year current without touching markup.
 document.querySelectorAll('[data-year]').forEach((el) => {

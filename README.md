@@ -1,74 +1,97 @@
-# Social Pulse — marketing site
+# Social Pulse — Marketing Site & Landing Page
 
-The public landing page for **[Social Pulse](https://socialpulsecrm.com)** — the all-in-one AI social media management platform for creators, brands and agencies.
+The official public landing page for **[Social Pulse](https://socialpulsecrm.com)** — the all-in-one AI social media management platform for creators, brands, and agencies.
 
-> Plan, publish, engage and grow across 12 platforms — with 16 AI agents that write, schedule, reply and report for you.
+> Plan, publish, engage, and grow across **13 platforms** — powered by **36 specialized AI agents** that write, schedule, reply, audit, and negotiate for you.
 
-It's a fast, dependency-free **static site** (HTML + modular CSS + a little vanilla JS) served by **GitHub Pages** on the custom domain `socialpulsecrm.com`. No build step.
+Served as a fast, zero-dependency, SEO-optimized **static site** via **GitHub Pages** on the custom domain `socialpulsecrm.com`.
 
-## Structure
+---
+
+## What Social Pulse Delivers
+
+- **13 Supported Platforms**: Instagram, YouTube, TikTok, X (Twitter), LinkedIn, Threads, Bluesky, Facebook Pages, Facebook Groups, Pinterest, Reddit, Mastodon, and Google Business (plus WhatsApp & Email in the unified inbox).
+- **36 Specialized AI Agents** across 4 suites:
+  1. **Content & Studio (8 agents)**: Content Generator, Scheduling Optimizer, Creative Studio, Image Generator, Link-in-Bio Co-pilot, Memory-Grounded Writer (RAG), Strategy Planner, Hashtag Assistant.
+  2. **Insights & Intelligence (7 agents)**: Analytics Insights, Trend Detection, Growth Copilot, Social Listening, Competitive Intelligence, Strategy Researcher, Post Analyser.
+  3. **Engagement & Community (6 agents)**: Engagement Assistant, Collaboration Assistant, Automation Suggestions, Inbox Intent Classifier, Inbox FAQ Responder, Inbox Sentiment Classifier.
+  4. **Campaigns & Matching (15 agents)**: Campaign Strategist, Sequence Writer, Outreach Reply Triage, Content Compliance Reviewer (FTC disclosure & brand safety), Usage Rights & Whitelisting Advisor, Creator Rate Advisor, Campaign Forecast, Report Narrative Generator, Discovery Copilot, Campaign Autopilot, Creator Matching, Agreement Reviewer, Paid Media Advisor, Paid Media Flight Doctor, Publishing Assistant.
+  - **Pulse Copilot Reasoning Loop**: Autonomous multi-step tool-chaining engine that orchestrates multiple agents to execute complete workflows.
+- **Enterprise Governance**: Multi-stage **Maker-Checker approval workflows** and a dedicated **Post Deletion Approval Gate** to safeguard brand reputation.
+- **Agency Cockpit**: A single subscription covers **unlimited client workspaces** with isolated client channels, permissions, and admin impersonation.
+- **Flexible Burst Allowances**: Weekly refills for Free accounts and monthly allowances for paid tiers to enable campaign burst weeks without mid-day throttling.
+
+---
+
+## Directory Structure
 
 ```
 .
-├── index.html            # Landing page (single file for SEO)
-├── 404.html              # Branded not-found page
+├── index.html            # Primary landing page (single file for crawlability & SEO)
+├── 404.html              # Branded 404 not-found page
 ├── contact/index.html    # Contact & help page (mailto form)
-├── privacy/index.html    # Privacy Policy (updated July 2026)
-│   └── deletion/index.html # Facebook Data Deletion Instructions (Meta compliance)
-├── terms/index.html      # Terms of Service (updated July 2026)
-├── css/                  # Modular stylesheets, linked in order
-│   ├── tokens.css        #   design tokens + dark mode
-│   ├── base.css          #   reset, typography, layout helpers
-│   ├── buttons.css       #   button variants (incl. the Log in button)
-│   ├── nav.css           #   sticky nav + mobile menu
-│   ├── hero.css          #   hero, product mock, stats band
-│   ├── features.css      #   pillars, how-it-works, feature rows + visuals
-│   ├── ai.css            #   AI agents grid
-│   ├── audience.css      #   audience cards + differentiators
-│   ├── pricing.css       #   pricing toggle + plan cards
-│   ├── faq.css           #   FAQ accordion + contact prompt
-│   ├── footer.css        #   CTA banner, footer, reveal-on-scroll
-│   └── legal.css         #   legal pages + contact page
-├── js/                   # ES modules
-│   ├── main.js           #   landing entry (imports the modules below)
-│   ├── nav.js            #   sticky nav + mobile menu
-│   ├── pricing.js        #   monthly/yearly toggle
-│   ├── faq.js            #   accordion
-│   ├── reveal.js         #   reveal-on-scroll
-│   └── contact.js        #   contact-form → mailto handler
+├── privacy/index.html    # Privacy Policy & AI data governance
+│   └── deletion/index.html # Meta & Facebook Data Deletion Instructions
+├── terms/index.html      # Terms of Service & Maker-Checker rules
+├── css/                  # Modular stylesheets
+│   ├── tokens.css        #   Design tokens & CSS variables
+│   ├── base.css          #   Reset, typography & layout helpers
+│   ├── buttons.css       #   Button variants
+│   ├── nav.css           #   Sticky nav & responsive mobile menu
+│   ├── hero.css          #   Hero, trust pills & product mock
+│   ├── features.css      #   Core pillars & feature deep dives
+│   ├── ai.css            #   36 agent showcase, suite tabs & Copilot callout
+│   ├── audience.css      #   Creator, Brand & Agency pain-point cards
+│   ├── pricing.css       #   Pricing toggles (USD/INR, Mo/Yr) & plan cards
+│   ├── faq.css           #   Accordion FAQ
+│   ├── footer.css        #   CTA banner & footer navigation
+│   └── legal.css         #   Legal & contact page formatting
+├── js/                   # Vanilla ES modules
+│   ├── main.js           #   Entry point
+│   ├── nav.js            #   Navigation & mobile drawer
+│   ├── pricing.js        #   USD/INR, Monthly/Yearly, and Plan switcher
+│   ├── ai-showcase.js    #   Interactive 36-agent category filter
+│   ├── faq.js            #   Accordion interaction
+│   ├── reveal.js         #   IntersectionObserver scroll reveals
+│   └── contact.js        #   Contact mailto helper
 ├── assets/
-│   ├── favicon.svg       # brand mark / favicon
-│   └── og-image.svg      # social share image (1200×630)
+│   ├── favicon.svg       # Brand favicon mark
+│   ├── favicon-*.png     # PWA / webmanifest icon sizes
+│   └── og-image.svg      # Open Graph social preview (1200x630)
 ├── site.webmanifest
 ├── robots.txt
 ├── sitemap.xml
 └── CNAME                 # socialpulsecrm.com
 ```
 
-### Why HTML stays a single file
+---
 
-The page markup lives in `index.html` (not split into partials) on purpose: this is a no-build static SEO site, and splitting the body into client-side includes would hide content from crawlers. The **CSS and JS are split** into the `css/` and `js/` folders for readability — each file owns one concern and is linked in dependency order.
+## Local Development
 
-## Develop locally
-
-No build step. Open `index.html` directly, or serve the folder:
+No build step or Node dependencies required. Serve directly with any static server:
 
 ```bash
+# Using Python
 python3 -m http.server 8080
-# then visit http://localhost:8080
+
+# Or using Node / npx
+npx serve .
 ```
 
-Edit any file under `css/`, `js/`, or the HTML pages and refresh.
+Then visit `http://localhost:8080`.
 
-## Deploy
+---
 
-Pushing to the default branch publishes automatically via GitHub Pages. The `CNAME` file keeps the custom domain `socialpulsecrm.com`.
+## Deployment & Hosting
 
-All "Get started" / "Log in" CTAs point to the app at `https://app.socialpulsecrm.com`.
+- **Continuous Deployment**: Pushing commits to `origin/main` automatically deploys via GitHub Pages.
+- **Custom Domain**: `CNAME` maintains DNS mapping to `socialpulsecrm.com`.
+- **App Portal Link**: CTAs redirect to `https://app.socialpulsecrm.com`.
 
-## Notes
+---
 
-- **SEO:** canonical, Open Graph and Twitter meta, plus JSON-LD (`Organization` with `contactPoint`, `SoftwareApplication`, `FAQPage`), a sitemap and robots.txt.
-- **Accessibility:** semantic HTML, skip link, focus styles, `prefers-reduced-motion` and `prefers-color-scheme` (dark mode) support.
-- **Contact form:** static-host friendly — it builds a pre-filled `mailto:` to `support@socialpulsecrm.com` (no backend). Swap in a form service (e.g. Formspree) later if you want server-side capture.
-- **OG image:** `assets/og-image.svg` is used for link previews. For maximum compatibility with every social scraper, you can export a 1200×630 **PNG** from it and point the `og:image` / `twitter:image` tags at the PNG.
+## Compliance & Security
+
+- **Encryption**: OAuth credentials encrypted at rest with AES-256-GCM.
+- **AI Privacy**: Customer private posts and messages are never used to train public foundational LLM models.
+- **Standards**: Structured JSON-LD (`SoftwareApplication`, `FAQPage`, `Organization`), Meta Graph API data deletion callback compliance, and strict multi-tenant isolation.
