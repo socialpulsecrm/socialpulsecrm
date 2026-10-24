@@ -1,0 +1,125 @@
+/* ============================================================
+   Social Pulse — Cookie Consent Banner
+   Responsive, dark/light theme aware, accessible.
+   ============================================================ */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  max-width: 480px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg), 0 10px 40px rgba(99, 102, 241, 0.15);
+  border-radius: var(--r-md);
+  padding: 1.25rem 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  backdrop-filter: blur(16px);
+  animation: cookieSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cookieSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-banner__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cookie-banner__icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--brand-500);
+}
+
+.cookie-banner__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.cookie-banner__text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+}
+
+.cookie-banner__text a {
+  color: var(--brand-500);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.cookie-banner__btn-accept {
+  background: var(--gradient);
+  color: var(--on-brand);
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cookie-banner__btn-accept:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.cookie-banner__btn-necessary {
+  background: var(--bg-2);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.cookie-banner__btn-necessary:hover {
+  background: var(--border-soft);
+}
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: none;
+    padding: 1rem 1.25rem;
+  }
+  .cookie-banner__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cookie-banner__btn-accept,
+  .cookie-banner__btn-necessary {
+    text-align: center;
+  }
+}
