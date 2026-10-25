@@ -18,6 +18,25 @@
   justify-content: space-between;
   gap: 14px;
 }
+.legal-nav .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.18rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  line-height: 1;
+}
+.legal-nav .brand:hover {
+  color: var(--ink);
+}
+.legal-nav .brand__mark {
+  width: 32px;
+  height: 32px;
+  flex: none;
+}
 .legal-nav__actions {
   display: flex;
   align-items: center;
@@ -154,9 +173,9 @@
   width: 15px;
   height: 15px;
 }
-@media (min-width: 760px) {
+@media (min-width: 640px) {
   .contact__methods {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

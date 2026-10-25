@@ -49,6 +49,29 @@ a {
   text-decoration: none;
 }
 
+/* ---------- Brand logo & mark (shared across all headers & footers) ---------- */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.18rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.brand:hover {
+  color: var(--ink);
+}
+
+.brand__mark {
+  width: 32px;
+  height: 32px;
+  flex: none;
+}
+
 button {
   font-family: inherit;
   cursor: pointer;

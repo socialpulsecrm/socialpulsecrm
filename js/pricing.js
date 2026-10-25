@@ -13,7 +13,7 @@ export function initPricing() {
 
   // Initial state
   let cycle = 'monthly';
-  let currency = 'usd';
+  let currency = 'inr';
   let product = 'creator';
 
   const update = () => {
